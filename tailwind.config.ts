@@ -25,7 +25,23 @@ const fontWeights = {
 };
 
 const customTextPlugin = plugin(({ addUtilities }) => {
-  const newUtilities: Record<string, any> = {};
+  const newUtilities: Record<string, any> = {
+    '.font-weight-regular': {
+      fontWeight: 'var(--font-weight-regular)',
+    },
+    '.font-weight-medium': {
+      fontWeight: 'var(--font-weight-medium)',
+    },
+    '.font-weight-semibold': {
+      fontWeight: 'var(--font-weight-semibold)',
+    },
+    '.font-weight-bold': {
+      fontWeight: 'var(--font-weight-bold)',
+    },
+    '.font-weight-extrabold': {
+      fontWeight: 'var(--font-weight-extrabold)',
+    },
+  };
 
   for (const [sizeName, sizeVar] of Object.entries(textSizes)) {
     for (const [weightName, weightVar] of Object.entries(fontWeights)) {
@@ -37,7 +53,6 @@ const customTextPlugin = plugin(({ addUtilities }) => {
       };
     }
   }
-
   addUtilities(newUtilities);
 });
 
