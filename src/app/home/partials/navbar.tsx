@@ -24,7 +24,6 @@ const Navbar = () => {
           alt='Logo'
           width={40}
           height={40}
-          className=''
         />
         <nav className='hidden md:block'>
           <ul className='flex-start gap-4'>

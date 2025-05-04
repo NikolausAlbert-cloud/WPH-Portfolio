@@ -10,8 +10,8 @@ const Hero = () => {
       </div>
       <h1 className='display-xl-bold md:display-3xl-extrabold my-6 text-center'>
         I am a&nbsp;
-        <span className='inline-block h-18 relative bg-gradient-to-r from-pink-600 to-purple-500 p-0.5'>
-          <span className='inline-block h-17 bg-neutral-600'>
+        <span className='relative inline-block bg-gradient-to-r from-pink-600 to-purple-500 p-0.5'>
+          <span className='inline-block bg-neutral-600'>
             <span className='absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%] bg-gradient-to-r from-pink-600 to-purple-500 p-0.5'>
               <span
                 className='bg-neutral-100'
@@ -61,7 +61,7 @@ const Hero = () => {
       </h1>
       <p className='text-center text-neutral-200'>
         Hi, I’m Nikolaus, a passionate web developer with over{' '}
-        <span className='text-neutral-100'>1 years of experience</span> in
+        <span className='text-neutral-100'>1 year of experience</span> in
         creating responsive websites. I also teach aspiring developers to master
         modern web programming and bring their ideas to life.
       </p>

@@ -77,3 +77,14 @@ export default {
   },
   plugins: [customTextPlugin],
 } satisfies Config;
+
+// module.exports = {
+//   theme: {
+//     extend: {
+//       backgroundImage: {
+//         'images': "url('/images/waves.jpg')",
+        
+//       }
+//     }
+//   }
+// }
