@@ -4,7 +4,7 @@ import React from 'react';
 
 import { Button } from '@/components/ui/button';
 
-const Subhero = () => {
+const Hero1 = () => {
   return (
     <section
       className='flex-center relative mt-4 flex-col'
@@ -27,4 +27,4 @@ const Subhero = () => {
   );
 };
 
-export default Subhero;
+export default Hero1;

@@ -5,7 +5,7 @@ const Hero = () => {
     <section className='custom-container flex-center mt-55.5 flex-col items-center'>
       <div className='rounded-full bg-gradient-to-r from-pink-600 to-purple-500 p-0.25 shadow-[0_0_17px_rgba(135,70,235,1)]'>
         <div className='text-xs-medium md:text-md-medium rounded-full bg-neutral-500 px-6 py-2'>
-          <span>&#128100;</span>&nbsp;Nikolaus's PortFolio
+          <span>&#128100;</span>&nbsp;Niko's PortFolio
         </div>
       </div>
       <h1 className='display-xl-bold md:display-3xl-extrabold my-6 text-center'>
@@ -60,7 +60,7 @@ const Hero = () => {
         &nbsp;& Web Programming Instructor
       </h1>
       <p className='text-center text-neutral-200'>
-        Hi, I’m Nikolaus, a passionate web developer with over{' '}
+        Hi, I’m Niko, a passionate web developer with over{' '}
         <span className='text-neutral-100'>1 year of experience</span> in
         creating responsive websites. I also teach aspiring developers to master
         modern web programming and bring their ideas to life.

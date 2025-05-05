@@ -17,7 +17,7 @@ import { navigationData } from '@/constants/navigation-data';
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 w-full z-50">
+    <header className="fixed top-0 w-full z-50 bg-neutral-600 ">
       <div className='flex-between custom-container h-16 md:h-21'>
         <Image
           src='/icons/logo.jpg'
