@@ -7,11 +7,8 @@ const Hero2 = () => {
       <div       
       className="custom-container flex-center flex-col"
       style={{
-        position: "absolute",
-        top: "clamp(-2.81rem, 13.25vw, -10rem)",
-        left:"0",
-        right:"0",
         margin:"auto",
+        marginTop: "clamp(-2.81rem, 13.25vw, -10rem)",
         gap:"clamp(2.5rem, 6.62vw, 5rem)",
       }}
       >

@@ -6,7 +6,7 @@ import What_people_say from './home/partials/what_people_say';
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Navbar />
       <Hero />
       <Hero1 />
