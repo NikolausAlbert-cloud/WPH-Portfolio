@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ReviewCard from '@/components/ui/reviewCard';
+import { Marquee } from '@/components/ui/marquee';
 
 const What_people_say = () => {
   return (
@@ -23,8 +24,12 @@ const What_people_say = () => {
         marginTop:"clamp(2rem, 3.97vw, 3rem)",
       }}
       >
-        <ReviewCard />
-        <ReviewCard />
+        <Marquee>
+          <ReviewCard />
+        </Marquee>
+        <Marquee duration={50}>
+          <ReviewCard />
+        </Marquee>
       </div>
     </section>
   );
