@@ -2,7 +2,9 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className='custom-container flex-center mt-55.5 flex-col items-center'>
+    <section 
+    className='custom-container flex-center flex-col items-center'
+    style={{marginTop:"clamp(6.5rem, 18.38vw, 13.88rem)"}}>
       <div className='rounded-full bg-gradient-to-r from-pink-600 to-purple-500 p-0.25 shadow-[0_0_17px_rgba(135,70,235,1)]'>
         <div className='text-xs-medium md:text-md-medium rounded-full bg-neutral-500 px-6 py-2'>
           <span>&#128100;</span>&nbsp;Niko's PortFolio

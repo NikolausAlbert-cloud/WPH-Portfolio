@@ -9,10 +9,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-gradient-to-r from-pink-600 to-purple-500 text-md-medium text-neutral-100 rounded-full hover:shadow-[0_0_17px_rgba(135,70,235,1)]',
+        default:
+          'bg-gradient-to-r from-pink-600 to-purple-500 text-md-medium text-neutral-100 rounded-full hover:shadow-[0_0_17px_rgba(135,70,235,1)]',
       },
       size: {
-        default: 'h-12 px-3 lg:px-11.75',
+        default: 'h-12 px-3 md:px-12',
       },
     },
     defaultVariants: {
