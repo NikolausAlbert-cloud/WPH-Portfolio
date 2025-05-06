@@ -9,7 +9,7 @@ interface MarqueeProps extends ComponentPropsWithRef<'div'> {
   children: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
-  duration?: number;
+  // duration?: number;
 }
 
 export const Marquee: React.FC<MarqueeProps> = ({
@@ -18,24 +18,24 @@ export const Marquee: React.FC<MarqueeProps> = ({
   pauseOnHover = true,
   children,
   vertical = false,
-  repeat = 4,
-  duration,
+  repeat = 3,
+  // duration = 10,
   ...props
 }) => {
   return (
     <div
-      className={cn(
-        `group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:${duration}s] [--gap:3rem]`,
-        className
-      )}
-      {...props}
+    className={cn(
+      `[--duration:20s] [--gap:3rem] flex [gap:var(--gap)]`, 
+      className
+    )}
+    {...props}
     >
       {Array(repeat)
         .fill(null)
         .map((_, i) => (
           <div
             key={i}
-            className={cn('flex shrink-0 justify-around [gap:var(--gap)]', {
+            className={cn({
               'animate-marquee flex-row': !vertical,
               'animate-marquee-vertical flex-col': vertical,
               'group-hover:[animation-play-state:paused]': pauseOnHover,
@@ -48,7 +48,3 @@ export const Marquee: React.FC<MarqueeProps> = ({
     </div>
   );
 };
-
-<div className='parent'>
-  <div className='child'></div>
-</div>;

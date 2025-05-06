@@ -24,10 +24,6 @@ const Hero1 = () => {
           position: 'absolute',
           zIndex: -1,
           inset: 0,
-          // top: 0,
-          // right: 0,
-          // bottom: 0,
-          // left: 0,
           height: 'clamp(8.31rem, 31.45vw, 23.75rem)',
         }}
       >

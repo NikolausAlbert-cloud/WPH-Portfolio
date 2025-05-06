@@ -7,7 +7,7 @@ const Hero = () => {
     style={{marginTop:"clamp(6.5rem, 18.38vw, 13.88rem)"}}>
       <div className='rounded-full bg-gradient-to-r from-pink-600 to-purple-500 p-0.25 shadow-[0_0_17px_rgba(135,70,235,1)]'>
         <div className='text-xs-medium md:text-md-medium rounded-full bg-neutral-500 px-6 py-2'>
-          <span>&#128100;</span>&nbsp;Niko's PortFolio
+          <span className="animate-pulse">&#128100;</span>&nbsp;<span className="animate-pulse">Niko's PortFolio</span>
         </div>
       </div>
       <h1 className='display-xl-bold md:display-3xl-extrabold my-6 text-center'>

@@ -5,12 +5,12 @@ import { reviewData } from '@/constants/reviewData';
 const ReviewCard = () => {
   return (
     <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        gap: 'clamp(0.75rem, 1.66vw, 1.25rem)',
-        position: 'relative',
-      }}
+    style={{
+      display: 'flex',
+      flexDirection: 'row',
+      gap: 'clamp(0.75rem, 1.66vw, 1.25rem)',
+      position: 'relative',
+    }}
     >
       {reviewData.map((data, i) => (
         <div
@@ -18,7 +18,7 @@ const ReviewCard = () => {
         className='p-0.2 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-500'
         >
           <div
-            className='rounded-2xl bg-neutral-500 overflow-hidden hover:scale-99 hover:cursor-pointer transition-all duration-300'
+            className='rounded-2xl bg-neutral-500 overflow-hidden hover:scale-99 hover:cursor-pointer'
             style={{
               padding: 'clamp(1rem, 1.66vw, 1.25rem)',
               height: 'clamp(13.44rem, 20.12vw, 15.19rem)',
@@ -32,7 +32,7 @@ const ReviewCard = () => {
               <Image
                 src={data.src}
                 alt={data.name}
-                style={{ height: 'clamp(3rem, 4.97vw, 3.75rem)', borderRadius: '90%' }}
+                style={{ height: 'clamp(3rem, 4.97vw, 3.75rem)', borderRadius: '50%', objectFit: 'cover'}}
               />
               <div>
                 <h3 className='text-md-bold text-neutral-100'>{data.name}</h3>
@@ -47,9 +47,6 @@ const ReviewCard = () => {
           </div>
         </div>
       ))}
-
-      <div className="absolute left-0 bg-gradient-to-r from-neutral-600 to-transparent w-[25%] inset-y-0"></div>
-      <div className="absolute right-0 bg-gradient-to-l from-neutral-600 to-transparent w-[25%] inset-y-0 "></div>
     </div>
   );
 };
