@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Hero2 = () => {
+const Who_I_am = () => {
   return (
     <section className="relative">
       <div       
@@ -73,4 +73,4 @@ const Hero2 = () => {
   )
 }
 
-export default Hero2
+export default Who_I_am;

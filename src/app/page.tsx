@@ -1,16 +1,16 @@
 import Hero from './home/partials/hero';
-import Hero1 from './home/partials/hero1';
-import Hero2 from './home/partials/hero2';
+import Hero_picture from './home/partials/hero_picture';
 import Navbar from './home/partials/navbar';
 import What_people_say from './home/partials/what_people_say';
+import Who_I_am from './home/partials/who_I_am';
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className='flex flex-col'>
       <Navbar />
       <Hero />
-      <Hero1 />
-      <Hero2 />
+      <Hero_picture />
+      <Who_I_am />
       <What_people_say />
     </div>
   );

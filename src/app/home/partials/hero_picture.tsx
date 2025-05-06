@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Button } from '@/components/ui/button';
 
-const Hero1 = () => {
+const Hero_picture = () => {
   return (
     <section
       className='flex items-center flex-col relative mt-4 '
@@ -27,11 +27,10 @@ const Hero1 = () => {
           height: 'clamp(8.31rem, 31.45vw, 23.75rem)',
         }}
       >
-        heloo
       </div>
       <div className='absolute inset-x-0 bottom-0 z-[-1] h-[100%] bg-gradient-to-b from-neutral-600 from-35% to-transparent to-50%'></div>
     </section>
   );
 };
 
-export default Hero1;
+export default Hero_picture;
