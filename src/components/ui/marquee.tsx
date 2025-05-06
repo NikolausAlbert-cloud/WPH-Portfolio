@@ -18,14 +18,13 @@ export const Marquee: React.FC<MarqueeProps> = ({
   pauseOnHover = true,
   children,
   vertical = false,
-  repeat = 3,
-  // duration = 10,
+  repeat = 4,
   ...props
 }) => {
   return (
     <div
     className={cn(
-      `[--duration:20s] [--gap:3rem] flex [gap:var(--gap)]`, 
+      `[--gap:3rem] group flex [gap:var(--gap)]`, 
       className
     )}
     {...props}

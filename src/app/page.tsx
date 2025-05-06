@@ -1,3 +1,4 @@
+import Faq from './home/partials/faq';
 import Hero from './home/partials/hero';
 import Hero_picture from './home/partials/hero_picture';
 import Navbar from './home/partials/navbar';
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Hero_picture />
       <Who_I_am />
+      <Faq />
       <What_people_say />
     </div>
   );
