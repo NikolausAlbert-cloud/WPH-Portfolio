@@ -20,17 +20,18 @@ const Faq = () => {
     >
       <Accordion type='single' collapsible>
         {faqData.map((item, i) => (
-          <div 
+          <div
           key={i} 
-          className="mb-4 md:mb-5 last:mb-0 rounded-2xl bg-gradient-to-r group/trigger from-pink-600 to-purple-500 group-data-[state=open]/trigger:p-0.5">
+          className="mb-4 md:mb-5 last:mb-0 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-500 has-data-[state=open]:p-[1px]"
+          >
             <AccordionItem 
             value={`item-${i}`} 
             className="bg-neutral-500 rounded-2xl"
             >
-              <AccordionTrigger>{item.title}</AccordionTrigger>
+              <AccordionTrigger className="group/trigger">{item.title}</AccordionTrigger>
               <AccordionContent>{item.description}</AccordionContent>
             </AccordionItem>
-            </div>
+          </div>
         ))}
       </Accordion>
     </Section>

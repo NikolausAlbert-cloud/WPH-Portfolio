@@ -33,12 +33,12 @@ function AccordionTrigger({
   return (
     <AccordionPrimitive.Header className='flex'>
       <AccordionPrimitive.Trigger
-        data-slot='accordion-trigger'
-        className={cn(
-          'text-md-semibold md:text-xl-semibold flex flex-1 cursor-pointer items-start justify-between text-left',
-          className
-        )}
-        {...props}
+      data-slot='accordion-trigger'
+      className={cn(
+        'flex flex-1 cursor-pointer items-start justify-between text-md-semibold md:text-xl-semibold text-left',
+        className
+      )}
+      {...props}
       >
         <div className='flex-1 text-left'>{children}</div>
         <div className='shrink-0'>
