@@ -1,23 +1,24 @@
 import { StaticImageData } from "next/image";
-import Project1_Image from "../../../public/images/project1.jpg";
-import Project2_Image from "../../../public/images/project2.jpg";
-import Project3_Image from "../../../public/images/project3.jpg";
-import Project4_Image from "../../../public/images/project4.jpg";
-import Project5_Image from "../../../public/images/project5.jpg";
-import Project6_Image from "../../../public/images/project6.jpg";
+
+import Project1_Image from "../../public/images/project1.jpg";
+import Project2_Image from "../../public/images/project2.jpg";
+import Project3_Image from "../../public/images/project3.jpg";
+import Project4_Image from "../../public/images/project4.jpg";
+import Project5_Image from "../../public/images/project5.jpg";
+import Project6_Image from "../../public/images/project6.jpg";
 
 type SkillProps = {
   skill: string;
 }
 
-type ProjectExpCardProps = {
+type ProjectExpDataProps = {
   src: StaticImageData;
   title: string;
   skills: SkillProps[];
   description: string;
 }
 
-export const ProjectExpCard: ProjectExpCardProps[] = [
+export const ProjectExpData: ProjectExpDataProps[] = [
   {
     src: Project1_Image,
     title: "Landing Page",
