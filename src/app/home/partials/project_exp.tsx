@@ -9,7 +9,7 @@ const Project_exp = () => {
         <h2 className='display-sm-bold md:display-2xl-extraboldtext-neutral-100 text-left'>
           Experience in Front-End Development
         </h2>
-        <p className='text-sm-regular md:text-md-regular text-right text-neutral-200'>
+        <p className='text-sm-regular md:text-md-regular text-left md:text-right text-neutral-200'>
           I have experience developing 30+ web projects across various
           industries, including marketplaces, health, fashion, sports, and more.
           Implemented 1000+ responsive web pages with interactive features and
