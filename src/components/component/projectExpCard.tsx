@@ -3,6 +3,8 @@ import Image from 'next/image';
 import React from 'react';
 
 import { ProjectExpData } from '@/constants/projectExpData';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export const ProjectExpCard = () => {
   return (
@@ -37,23 +39,25 @@ export const ProjectExpCard = () => {
               {item.description}
             </p>
           </div>
-          <button className='flex flex-row gap-[3px] md:gap-[6px]'>
-            <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent'>
-              Visit
-            </span>
-            <Icon
-              icon='uil:arrow-up-right'
-              width='24'
-              height='24'
-              // className=" bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent"
-              className='text-blue-500'
-            />
+          <button className="cursor-pointer">
+            <Link href="#" className='flex flex-row gap-[3px] md:gap-[6px]'>
+              <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent'>
+                Visit
+              </span>
+              <Icon
+                icon='uil:arrow-up-right'
+                width='24'
+                height='24'
+                // className=" bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent"
+                className='text-blue-500'
+              />
+            </Link>
           </button>
         </div>
       ))}
       
       {/* "Detail" Info only in xl size */}
-      <div className="absolute invisible xl:visible max-xl:visible left-1/2 translate-x-[15px] top-[206px] bg-gradient-to-r from-pink-600 to-purple-500 rounded-full text-center p-1">
+      <div className="absolute invisible xl:max-2xl:visible left-1/2 translate-x-[15px] top-[206px] bg-gradient-to-r from-pink-600 to-purple-500 rounded-full text-center p-1">
         <div className="text-md-semibold bg-neutral-500 rotate-[-10deg] text-neutral-100 rounded-full w-25 aspect-square flex-center"><p>Detail</p></div>
       </div>
     </div>
