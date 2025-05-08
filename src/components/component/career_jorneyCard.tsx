@@ -9,28 +9,28 @@ const Career_journeyCard = () => {
         <div />
         <span />
       </div>
-      <div>
+      <div className="flex flex-col gap-4 md:gap-6">
         {careerJourneyData.map((item, i) => (
           <div
             key={i}
-            className='rounded-4xl bg-neutral-500 p-6 text-neutral-100'
+            className=' flex flex-col gap-3 md:gap-5 rounded-4xl bg-neutral-500 p-3 md:p-6 text-neutral-100'
           >
-            <h3 className='diplay-xs-bold'>{item.title}</h3>
-            <div className='flex-between w-fit'>
-              <p className="flex flex-row">
-                <Building size={20px}/>
+            <h3 className='text-md-bold md:display-xs-bold'>{item.title}</h3>
+            <div className='flex flex-col md:flex-row w-fit text-sm-regular md:text-md-regular'>
+              <p className="flex flex-row gap-[2px] md:gap-[6px] mb-3 md:mb-0">
+                <Building size={20}/>
                 {item.company}
               </p>
-              <p className='flex-center size-7 bg-transparent'>
-                <span className='size-1 rounded-full bg-neutral-100' />
+              <p className='flex-center md:size-7 bg-transparent'>
+                <span className='size-1 rounded-full bg-neutral-100 hidden md:block' />
               </p>
-              <p className="flex flex-row">
-                <CalendarDays />
+              <p className="flex flex-row gap-[6px]">
+                <CalendarDays size={20}/>
                 {item.time}
               </p>
             </div>
             {item.tasks.map((task, j) => (
-              <ul key={`${i}.${j}`}>
+              <ul key={`${i}.${j}`} className="flex flex-col gap-3 md:gap-5 text-neutral-200 text-sm-regular md:text-md-regular list-disc list-inside">
                 <li>{task.description}</li>
               </ul>
             ))}
