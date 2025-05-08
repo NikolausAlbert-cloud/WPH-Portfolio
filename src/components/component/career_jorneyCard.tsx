@@ -4,17 +4,19 @@ import { careerJourneyData } from '@/constants/career_journeyData';
 
 const Career_journeyCard = () => {
   return (
-    <div className='grid grid-cols-[5rem_auto] gap-2 md:gap-6'>
-      <div>
-        <div />
-        <span />
-      </div>
-      <div className="flex flex-col gap-4 md:gap-6">
-        {careerJourneyData.map((item, i) => (
-          <div
-            key={i}
-            className=' flex flex-col gap-3 md:gap-5 rounded-4xl bg-neutral-500 p-3 md:p-6 text-neutral-100'
-          >
+    <div className="flex flex-col gap-4 md:gap-6">
+      {careerJourneyData.map((item, i) => (
+        <div 
+          key={i}
+          className='grid grid-cols-[5px_auto] gap-2 md:gap-6'
+        >
+          <div className="relative">
+            {/* line */}
+            <div className="w-1 bg-gradient-to-r from-pink-600 to-purple-500 h-[calc(100%)] left-1/2 "/>
+            {/* circle */}
+            <span className="ng-blue-500"></span>
+          </div>
+          <div className=' flex flex-col gap-3 md:gap-5 rounded-4xl bg-neutral-500 p-3 md:p-6 text-neutral-100'>
             <h3 className='text-md-bold md:display-xs-bold'>{item.title}</h3>
             <div className='flex flex-col md:flex-row w-fit text-sm-regular md:text-md-regular'>
               <p className="flex flex-row gap-[2px] md:gap-[6px] mb-3 md:mb-0">
@@ -35,8 +37,8 @@ const Career_journeyCard = () => {
               </ul>
             ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
