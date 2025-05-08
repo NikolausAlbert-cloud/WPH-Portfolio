@@ -11,7 +11,7 @@ type SectionProps = {
 
 const Section:React.FC<SectionProps> = ({children, className,title, description, id}) => {
   return (
-    <section id={id} className={cn("custom-container my-10 md:my-20", className)}>
+    <section id={id} className={cn("custom-container py-10 md:py-20", className)}>
       <div className="text-center">
         <h2 className='display-sm-extrabold md:display-2xl-extrabold text-neutral-100'>
           {title}

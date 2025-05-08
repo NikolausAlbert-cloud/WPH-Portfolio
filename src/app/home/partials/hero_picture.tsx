@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const Hero_picture = () => {
   return (
     <section
-      className='flex items-center flex-col relative mt-4 '
+      className='flex items-center flex-col relative pt-4 '
       style={{ height: 'clamp(7.06rem, 31.51vw, 23.79rem)' }}
     >
       <div className="custom-container w-full md:w-fit ">
