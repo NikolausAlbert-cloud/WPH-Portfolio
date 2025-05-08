@@ -40,15 +40,15 @@ const Why_standout_table = () => {
               <TableCell_radixUi>
                 <Image 
                   src={item.dataTitle_2} alt={`data-${item.dataTitle_1}-me`} 
-                  className="bg-gradient-to-r from-pink-600 to-purple-500 rounded-full w-7 aspect-square" 
+                  className="absolute left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] bg-gradient-to-r from-pink-600 to-purple-500 rounded-full w-7 aspect-square" 
                 />
               </TableCell_radixUi>
-              <TableColumHeaderCell_radixUi>
+              <TableCell_radixUi>
                 <Image 
                   src={item.dataTitle_3} alt={`data-${item.dataTitle_1}-other`} 
-                  className="bg-neutral-300 rounded-full w-7 aspect-square"
+                  className="absolute left-1/2 translate-x-[-50%] top-1/2 translate-y-[-50%] bg-neutral-300 rounded-full w-7 aspect-square"
                 />
-              </TableColumHeaderCell_radixUi>
+              </TableCell_radixUi>
             </TableRow_radixUi>
           ))}
         </TableBody_radixUi>
