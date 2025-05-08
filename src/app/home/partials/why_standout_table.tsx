@@ -12,7 +12,7 @@ import {
   TableBody_radixUi,
 } from '@/components/ui/table_radixUi';
 
-import { DataTable, HeaderTable } from '@/constants/why_standout_data';
+import { DataTable, HeaderTable } from '@/constants/why_standoutData';
 
 const Why_standout_table = () => {
   return (

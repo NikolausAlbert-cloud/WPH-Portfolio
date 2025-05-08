@@ -1,3 +1,4 @@
+import Career_journey from './home/partials/career_journey';
 import Faq from './home/partials/faq';
 import Hero from './home/partials/hero';
 import Hero_picture from './home/partials/hero_picture';
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Hero_picture />
       <Who_I_am />
+      <Career_journey />
       <Faq />
       <Why_standout_table />
       <Project_exp />

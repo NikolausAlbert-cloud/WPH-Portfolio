@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 
-import { navigationData } from '@/constants/navigation-data';
+import { navigationData } from '@/constants/navigationData';
 
 const Navbar = () => {
   return (
