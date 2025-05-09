@@ -2,37 +2,42 @@ import { Building, CalendarDays } from 'lucide-react';
 
 import { careerJourneyData } from '@/constants/career_journeyData';
 
+// import Career_journeyLine from '../client_component/career_journeyLine';
+
 const Career_journeyCard = () => {
   return (
-    <div className="flex flex-col gap-4 md:gap-6">
+    <div className='flex flex-col gap-4 md:gap-6'>
       {careerJourneyData.map((item, i) => (
-        <div 
-          key={i}
-          className='grid grid-cols-[5px_auto] gap-2 md:gap-6 [&:last>.line-decoration]:h-1/2'
-        >
-          <div className="relative w-5">
+        <div key={i} className='grid grid-cols-[5px_auto] gap-2 md:gap-6'>
+          <div className='relative w-5'>
             {/* line */}
-            <div className="line-decoration absolute left-1/2 translate-x-[-50%] w-1 bg-gradient-to-b from-pink-600 to-purple-500 h-[calc(100%+1rem)] md:h-[calc(100%+1.5rem)]" />
+            {/* <Career_journeyLine /> */}
+            <div
+              className='line-decoration absolute left-1/2 w-1 translate-x-[-50%] h-[calc(100%+1rem)] md:h-[calc(100%+1.5rem)] bg-gradient-to-b from-pink-600 to-purple-500'
+            />
             {/* circle */}
-            <span className=" absolute size-5 bg-gradient-to-r from-pink-600 to-purple-500 inset-0 rounded-full ring-5 ring-primary-100 ring-inset"></span>
+            <span className='ring-primary-100 absolute inset-0 size-5 rounded-full bg-gradient-to-r from-pink-600 to-purple-500 ring-5 ring-inset'></span>
           </div>
-          <div className=' flex flex-col gap-3 md:gap-5 rounded-4xl bg-neutral-500 p-3 md:p-6 text-neutral-100'>
+          <div className='flex flex-col gap-3 rounded-4xl bg-neutral-500 p-3 text-neutral-100 md:gap-5 md:p-6'>
             <h3 className='text-md-bold md:display-xs-bold'>{item.title}</h3>
-            <div className='flex flex-col md:flex-row w-fit text-sm-regular md:text-md-regular'>
-              <p className="flex flex-row gap-[2px] md:gap-[6px] mb-3 md:mb-0">
-                <Building size={20}/>
+            <div className='text-sm-regular md:text-md-regular flex w-fit flex-col md:flex-row'>
+              <p className='mb-3 flex flex-row gap-[2px] md:mb-0 md:gap-[6px]'>
+                <Building size={20} />
                 {item.company}
               </p>
-              <p className='flex-center md:size-7 bg-transparent'>
-                <span className='size-1 rounded-full bg-neutral-100 hidden md:block' />
+              <p className='flex-center bg-transparent md:size-7'>
+                <span className='hidden size-1 rounded-full bg-neutral-100 md:block' />
               </p>
-              <p className="flex flex-row gap-[6px]">
-                <CalendarDays size={20}/>
+              <p className='flex flex-row gap-[6px]'>
+                <CalendarDays size={20} />
                 {item.time}
               </p>
             </div>
             {item.tasks.map((task, j) => (
-              <ul key={`${i}.${j}`} className="flex flex-col gap-3 md:gap-5 text-neutral-200 text-sm-regular md:text-md-regular list-disc list-inside">
+              <ul
+                key={`${i}.${j}`}
+                className='text-sm-regular md:text-md-regular flex list-inside list-disc flex-col gap-3 text-neutral-200 md:gap-5'
+              >
                 <li>{task.description}</li>
               </ul>
             ))}

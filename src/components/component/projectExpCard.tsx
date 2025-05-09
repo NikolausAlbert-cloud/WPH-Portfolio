@@ -1,14 +1,13 @@
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 import { ProjectExpData } from '@/constants/projectExpData';
-import { Button } from '../ui/button';
-import Link from 'next/link';
 
 export const ProjectExpCard = () => {
   return (
-    <div className='relative flex-center flex flex-1 flex-wrap gap-8 md:gap-3'>
+    <div className='flex-center relative flex flex-1 flex-wrap gap-8 md:gap-3'>
       {ProjectExpData.map((item, i) => (
         <div
           key={i}
@@ -39,8 +38,8 @@ export const ProjectExpCard = () => {
               {item.description}
             </p>
           </div>
-          <button className="cursor-pointer">
-            <Link href="#" className='flex flex-row gap-[3px] md:gap-[6px]'>
+          <button className='cursor-pointer'>
+            <Link href='#' className='flex flex-row gap-[3px] md:gap-[6px]'>
               <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent'>
                 Visit
               </span>
@@ -55,10 +54,12 @@ export const ProjectExpCard = () => {
           </button>
         </div>
       ))}
-      
+
       {/* "Detail" Info only in xl size */}
-      <div className="absolute invisible xl:max-2xl:visible left-1/2 translate-x-[15px] top-[206px] bg-gradient-to-r from-pink-600 to-purple-500 rounded-full text-center p-1">
-        <div className="text-md-semibold bg-neutral-500 rotate-[-10deg] text-neutral-100 rounded-full w-25 aspect-square flex-center"><p>Detail</p></div>
+      <div className='invisible absolute top-[206px] left-1/2 translate-x-[15px] rounded-full bg-gradient-to-r from-pink-600 to-purple-500 p-1 text-center xl:max-2xl:visible'>
+        <div className='text-md-semibold flex-center aspect-square w-25 rotate-[-10deg] rounded-full bg-neutral-500 text-neutral-100'>
+          <p>Detail</p>
+        </div>
       </div>
     </div>
   );

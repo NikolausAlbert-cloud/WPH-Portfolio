@@ -29,20 +29,18 @@ export const Marquee: React.FC<MarqueeProps> = ({
     )}
     {...props}
     >
-      {Array(repeat)
-        .fill(null)
-        .map((_, i) => (
-          <div
-            key={i}
-            className={cn({
-              'animate-marquee flex-row': !vertical,
-              'animate-marquee-vertical flex-col': vertical,
-              'group-hover:[animation-play-state:paused]': pauseOnHover,
-              '[animation-direction:reverse]': reverse,
-            })}
-          >
-            {children}
-          </div>
+      {Array(repeat).fill(null).map((_, i) => (
+        <div
+          key={i}
+          className={cn({
+            'animate-marquee flex-row': !vertical,
+            'animate-marquee-vertical flex-col': vertical,
+            'group-hover:[animation-play-state:paused]': pauseOnHover,
+            '[animation-direction:reverse]': reverse,
+          })}
+        >
+          {children}
+        </div>
         ))}
     </div>
   );
