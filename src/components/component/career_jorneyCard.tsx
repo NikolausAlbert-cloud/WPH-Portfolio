@@ -8,13 +8,13 @@ const Career_journeyCard = () => {
       {careerJourneyData.map((item, i) => (
         <div 
           key={i}
-          className='grid grid-cols-[5px_auto] gap-2 md:gap-6'
+          className='grid grid-cols-[5px_auto] gap-2 md:gap-6 [&:last>.line-decoration]:h-1/2'
         >
-          <div className="relative">
+          <div className="relative w-5">
             {/* line */}
-            <div className="w-1 bg-gradient-to-r from-pink-600 to-purple-500 h-[calc(100%)] left-1/2 "/>
+            <div className="line-decoration absolute left-1/2 translate-x-[-50%] w-1 bg-gradient-to-b from-pink-600 to-purple-500 h-[calc(100%+1rem)] md:h-[calc(100%+1.5rem)]" />
             {/* circle */}
-            <span className="ng-blue-500"></span>
+            <span className=" absolute size-5 bg-gradient-to-r from-pink-600 to-purple-500 inset-0 rounded-full ring-5 ring-primary-100 ring-inset"></span>
           </div>
           <div className=' flex flex-col gap-3 md:gap-5 rounded-4xl bg-neutral-500 p-3 md:p-6 text-neutral-100'>
             <h3 className='text-md-bold md:display-xs-bold'>{item.title}</h3>
