@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -6,8 +6,10 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ClockLoader } from 'react-spinners';
 import { z } from 'zod';
+import 'dotenv/config';
 
 import Section from '@/components/layouts/section';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -17,7 +19,8 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+
+
 
 const contactSchema = z.object({
   name: z
@@ -51,14 +54,14 @@ const Contact_me = () => {
     try {
       setLoading(true);
       await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
           name: data.name,
           email: data.email,
           message: data.message,
         },
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
       form.reset();
       setVariant('success');
@@ -77,22 +80,21 @@ const Contact_me = () => {
       title='Contact Me'
       description='Feel free to drop a message for any inquiries or collaborations.'
       className='grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
-      classNameContainer_l="flex-center flex-col"
+      classNameContainer_l='flex-center flex-col'
     >
-      <Form {...form} >
-        <div className="max-w-120 rounded-4xl bg-gradient-to-r from-neutral-350 to-neutral-100">
-          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4 md:space-y-5 rounded-4xl mx-auto max-w-120 p-6 before:bg-neutral-100:opacity-5'>
+      <Form {...form}>
+        <div className='from-neutral-350 max-w-120 rounded-4xl bg-gradient-to-r to-neutral-100'>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className='before:bg-neutral-100:opacity-5 mx-auto max-w-120 space-y-4 rounded-4xl p-6 md:space-y-5'
+          >
             <FormField
               control={form.control}
               name='name'
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
-                      disabled={loading}
-                      placeholder='Name'
-                      {...field}
-                    />
+                    <Input disabled={loading} placeholder='Name' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -104,11 +106,7 @@ const Contact_me = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
-                      disabled={loading}
-                      placeholder='Email'
-                      {...field}
-                    />
+                    <Input disabled={loading} placeholder='Email' {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -130,11 +128,7 @@ const Contact_me = () => {
                 </FormItem>
               )}
             />
-            <Button 
-              disabled={loading} 
-              type='submit'
-              className="w-full"  
-            >
+            <Button disabled={loading} type='submit' className='w-full'>
               {loading ? <ClockLoader /> : 'Send'}
             </Button>
           </form>
