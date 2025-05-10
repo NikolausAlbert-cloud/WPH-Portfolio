@@ -60,9 +60,11 @@
   --color-neutral-100: #FFFFFF;
   --color-neutral-200: #B5B5B5;
   --color-neutral-300: #545357;
+  --color-neutral-350: #262626;
   --color-neutral-400: #242424;
   --color-neutral-500: #0f0f0f;
   --color-neutral-600: #020203;
+ 
 
   /* Primary */
   --color-primary-100: #D3BBFA;
