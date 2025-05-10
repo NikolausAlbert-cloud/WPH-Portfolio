@@ -1,6 +1,7 @@
 import Career_journey from './home/partials/career_journey';
 import Contact_me from './home/partials/contact_me';
 import Faq from './home/partials/faq';
+import Footer from './home/partials/footer';
 import Hero from './home/partials/hero';
 import Hero_picture from './home/partials/hero_picture';
 import Navbar from './home/partials/navbar';
@@ -22,6 +23,7 @@ export default function Home() {
       <Project_exp />
       <What_people_say />
       <Contact_me />
+      <Footer />
     </div>
   );
 }

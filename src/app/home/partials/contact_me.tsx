@@ -76,9 +76,8 @@ const Contact_me = () => {
       id='contact_me'
       title='Contact Me'
       description='Feel free to drop a message for any inquiries or collaborations.'
-      className='flex flex-wrap md:gap-6 lg:gap-56'
-      classNameContainer_l='flex-center flex-col flex-[4.5] basis-90'
-      classNameContainer_r='flex-[5.5] basis-90'
+      className='grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
+      classNameContainer_l="flex-center flex-col"
     >
       <Form {...form} >
         <div className="max-w-120 rounded-4xl bg-gradient-to-r from-neutral-350 to-neutral-100">
