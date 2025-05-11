@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import Message_status from './message_status';
 
 
 
@@ -134,6 +135,12 @@ const Contact_me = () => {
           </form>
         </div>
       </Form>
+      <Message_status 
+        variant={variant}
+        open={showDialog}
+        onOpenChange={setShowDialog}
+        loading={loading}
+      />
     </Section>
   );
 };

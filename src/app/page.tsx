@@ -4,6 +4,7 @@ import Faq from './home/partials/faq';
 import Footer from './home/partials/footer';
 import Hero from './home/partials/hero';
 import Hero_picture from './home/partials/hero_picture';
+import Message_status from './home/partials/message_status';
 import Navbar from './home/partials/navbar';
 import Project_exp from './home/partials/project_exp';
 import What_people_say from './home/partials/what_people_say';
@@ -23,6 +24,7 @@ export default function Home() {
       <Project_exp />
       <What_people_say />
       <Contact_me />
+      <Message_status />
       <Footer />
     </div>
   );
