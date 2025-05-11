@@ -38,8 +38,8 @@ const contactSchema = z.object({
 
 const Contact_me = () => {
   const [loading, setLoading] = React.useState(false);
-  const [showDialog, setShowDialog] = React.useState(true);
-  const [variant, setVariant] = React.useState<'success' | 'failed'>('error');
+  const [showDialog, setShowDialog] = React.useState(false);
+  const [variant, setVariant] = React.useState<'success' | 'failed'>('success');
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -83,10 +83,10 @@ const Contact_me = () => {
       classNameContainer_l='flex-center flex-col'
     >
       <Form {...form}>
-        <div className='from-neutral-350 max-w-120 rounded-4xl bg-gradient-to-r to-neutral-100'>
+        <div className='from-neutral-350 max-w-120 rounded-4xl bg-gradient-to-t to-neutral-100 p-[1px]'>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className='before:bg-neutral-100:opacity-5 mx-auto max-w-120 space-y-4 rounded-4xl p-6 md:space-y-5'
+            className='bg-neutral-350 before:opacity-5 mx-auto max-w-120 space-y-4 rounded-4xl p-6 md:space-y-5'
           >
             <FormField
               control={form.control}

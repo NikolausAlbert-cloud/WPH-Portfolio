@@ -1,5 +1,6 @@
 import Career_journey from './home/partials/career_journey';
 import Contact_me from './home/partials/contact_me';
+import Core_skill from './home/partials/core_skill';
 import Faq from './home/partials/faq';
 import Footer from './home/partials/footer';
 import Hero from './home/partials/hero';
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero_picture />
       <Who_I_am />
       <Career_journey />
+      <Core_skill />
       <Faq />
       <Why_standout_table />
       <Project_exp />

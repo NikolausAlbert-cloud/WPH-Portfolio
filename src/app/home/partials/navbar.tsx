@@ -1,5 +1,4 @@
-import { Mail } from 'lucide-react';
-import { Menu } from 'lucide-react';
+import { Menu, Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -17,21 +16,18 @@ import { navigationData } from '@/constants/navigationData';
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 w-full z-50 bg-neutral-600 ">
+    <header className='fixed top-0 z-50 w-full bg-neutral-600'>
       <div className='flex-between custom-container h-16 md:h-21'>
-        <Image
-          src='/icons/logo.jpg'
-          alt='Logo'
-          width={40}
-          height={40}
-        />
+        <Image src='/icons/logo.jpg' alt='Logo' width={40} height={40} />
         <nav className='hidden md:block'>
           <ul className='flex-start gap-4'>
             {navigationData.map((data) => (
-              <li key={data.label}>
+              <li
+                key={data.label}
+              >
                 <Link
                   href={data.href}
-                  className='text-md-regular hover:text-lg-regular px-2 text-neutral-100'
+                  className='text-md-regular px-2 text-neutral-100'
                 >
                   {data.label}
                 </Link>
@@ -52,7 +48,7 @@ const Navbar = () => {
               <Menu className='cursor-pointer md:hidden' />
             </SheetTrigger>
             <SheetContent>
-              <SheetTitle className="h-16">
+              <SheetTitle className='h-16'>
                 <Image
                   src='/icons/logo.jpg'
                   alt='Logo'
@@ -61,21 +57,26 @@ const Navbar = () => {
                   className='absolute top-4.5 left-5'
                 />
               </SheetTitle>
-              <nav className="mt-5">
-                <ul className="flex flex-col gap-6">
+              <nav className='mt-5'>
+                <ul className='flex flex-col gap-6'>
                   {navigationData.map((data) => (
                     <li key={data.label}>
                       <SheetClose asChild>
-                        <Link href={data.href} className="text-md-regular cursor-pointer">{data.label}</Link>
+                        <Link
+                          href={data.href}
+                          className='text-md-regular cursor-pointer'
+                        >
+                          {data.label}
+                        </Link>
                       </SheetClose>
                     </li>
                   ))}
                 </ul>
               </nav>
-              <Button className="mt-6 w-full">
+              <Button className='mt-6 w-full'>
                 <SheetClose asChild>
-                  <Link href="#">
-                    <div className="flex-center cursor-pointer gap-2">
+                  <Link href='#'>
+                    <div className='flex-center cursor-pointer gap-2'>
                       <Mail />
                       <p>Hire Me</p>
                     </div>
