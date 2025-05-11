@@ -1,4 +1,7 @@
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
+
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
@@ -6,52 +9,58 @@ import {
   DialogHeader,
   DialogTitle,
   DialogBody,
-  DialogClose
-} from "@/components/ui/dialog"
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
+  DialogClose,
+} from '@/components/ui/dialog';
 
 type MessageStatusProps = {
-  variant: "success" | "failed"
-  open: boolean
-  onOpenChange: (open: boolean) => void
-  loading?: boolean
-}
+  variant: 'success' | 'failed';
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  loading?: boolean;
+};
 
-const Message_status: React.FC<MessageStatusProps> = ({variant, open, onOpenChange, loading}) => {
+const Message_status: React.FC<MessageStatusProps> = ({
+  variant,
+  loading,
+  ...props
+}) => {
   return (
-    <Dialog>
-      <DialogContent>
+    <Dialog {...props}>
+      <DialogContent className='flex-center flex-col bg-transparent [&>button:last-child]:hidden'>
         <DialogHeader>
-          <Image 
-            src={
-              variant === "success" 
-                ? "/icons/message_sent_ok.jpg"
-                : "/icons/message_sent_failed.svg"
-            }
-            alt={`${variant === "success" ? "successful" : "failed"} message status`} 
-            width={40} 
-            height={40} 
-            
-          />
+            <Image
+              src={
+                variant === 'success'
+                  ? '/images/message_sent_ok.jpg'
+                  : '/images/message_sent_failed.svg'
+              }
+              alt={`${variant === 'success' ? 'successful' : 'failed'} message status`}
+              width={162}
+              height={162}
+              className={`${variant === "success" ? "mt-8 mb-6 max-sm:mb-4 max-sm:mt-6 max-sm:scale-85" : "scale-120"} rounded-2xl`}
+            />
         </DialogHeader>
-        <DialogBody>
+        <DialogBody className="flex-center flex-col">
           <DialogTitle>
-            {variant === "success" ? "Message sent successfully" : "Message sent failed"}
+            {variant === 'success'
+              ? 'Message sent successfully'
+              : 'Message sent failed'}
           </DialogTitle>
           <DialogDescription>
-            {variant === "success" 
-              ? "Thank you for reaching out. I’ll get back to you as soon as possible" 
-              : "Please go to home page and try again."
-            }
+            {variant === 'success'
+              ? 'Thank you for reaching out. I’ll get back to you as soon as possible'
+              : 'Please go to home page and try again.'}
           </DialogDescription>
         </DialogBody>
         <DialogClose asChild>
-          <Button>{loading ? "Loading..." : "Back to Home"}</Button>
+          <Button className="w-full text-sm-medium">
+            {loading ? 'Loading...' : 'Back to Home'}
+          </Button>
         </DialogClose>
       </DialogContent>
     </Dialog>
-  )
-}
+  );
+};
 
-export default Message_status
+export default Message_status;
+

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -19,9 +19,8 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+
 import Message_status from './message_status';
-
-
 
 const contactSchema = z.object({
   name: z
@@ -39,8 +38,8 @@ const contactSchema = z.object({
 
 const Contact_me = () => {
   const [loading, setLoading] = React.useState(false);
-  const [showDialog, setShowDialog] = React.useState(false);
-  const [variant, setVariant] = React.useState<'success' | 'error'>('success');
+  const [showDialog, setShowDialog] = React.useState(true);
+  const [variant, setVariant] = React.useState<'success' | 'failed'>('error');
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -62,13 +61,13 @@ const Contact_me = () => {
           email: data.email,
           message: data.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
       form.reset();
       setVariant('success');
     } catch (error) {
       console.error('Error sending email:', error);
-      setVariant('error');
+      setVariant('failed');
     } finally {
       setShowDialog(true);
       setLoading(false);
@@ -135,7 +134,7 @@ const Contact_me = () => {
           </form>
         </div>
       </Form>
-      <Message_status 
+      <Message_status
         variant={variant}
         open={showDialog}
         onOpenChange={setShowDialog}
