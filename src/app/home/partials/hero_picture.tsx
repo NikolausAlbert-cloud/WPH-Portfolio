@@ -16,8 +16,7 @@ const Hero_picture = () => {
       </div>
       <div
         style={{
-          opacity: 0.5,
-          backgroundImage: 'url(/images/waves.jpg)',
+          backgroundImage: 'url(/images/wave.svg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -28,7 +27,6 @@ const Hero_picture = () => {
         }}
       >
       </div>
-      <div className='absolute inset-x-0 bottom-0 z-[-1] h-[100%] bg-gradient-to-b from-neutral-600 from-35% to-transparent to-50%'></div>
     </section>
   );
 };

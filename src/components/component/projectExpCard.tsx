@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -38,17 +38,18 @@ export const ProjectExpCard = () => {
               {item.description}
             </p>
           </div>
-          <button className='cursor-pointer'>
-            <Link href='#' className='flex flex-row gap-[3px] md:gap-[6px]'>
-              <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent'>
+          <button className='cursor-pointer h-7 md:h-8'>
+            <Link href='#' className='flex flex-row items-center md:items-start'>
+              <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent pr-1.5 md:pr-3'>
                 Visit
               </span>
-              <Icon
-                icon='uil:arrow-up-right'
-                width='24'
-                height='24'
-                // className=" bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent"
-                className='text-blue-500'
+              <Image
+                src="/icons/upRightArrow.svg"
+                alt="upRightArrow"
+                width='10'
+                height='10'
+                className="mt-0 md:mt-2 max-sm:size-3"
+                
               />
             </Link>
           </button>
