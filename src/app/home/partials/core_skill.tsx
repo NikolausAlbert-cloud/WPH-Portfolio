@@ -10,7 +10,7 @@ import { coreSkillData } from '@/constants/coreSkill_data';
 const Core_skill = () => {
   return (
     <Section
-      id='core_skill'
+      id='skills'
       title='My Core Skill'
       description='An overview of the key technologies and frameworks I specialize in'
       className='w-full'

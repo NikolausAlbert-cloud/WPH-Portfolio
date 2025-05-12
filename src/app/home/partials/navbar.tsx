@@ -37,7 +37,7 @@ const Navbar = () => {
         </nav>
         <div className='flex-center cursor-pointer gap-4'>
           <Button asChild>
-            <Link href='#'>
+            <Link href='#contact'>
               <Mail />
               <span className='hidden lg:block'>Hire Me</span>
             </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
               </nav>
               <Button className='mt-6 w-full'>
                 <SheetClose asChild>
-                  <Link href='#'>
+                  <Link href='#contact'>
                     <div className='flex-center cursor-pointer gap-2'>
                       <Mail />
                       <p>Hire Me</p>

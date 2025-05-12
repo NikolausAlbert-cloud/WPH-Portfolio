@@ -76,7 +76,7 @@ const Contact_me = () => {
 
   return (
     <Section
-      id='contact_me'
+      id='contact'
       title='Contact Me'
       description='Feel free to drop a message for any inquiries or collaborations.'
       className='grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'

@@ -11,5 +11,5 @@ export const navigationData: NavigationProps[] = [
   { label: 'Projects', href: '#projects' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
-  { label: 'Hire Me', href: '#hire-me' }
+  // { label: 'Hire Me', href: '#contact' }
 ];

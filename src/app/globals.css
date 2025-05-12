@@ -205,6 +205,10 @@
 }
 /* end of shadcn */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-neutral-600 text-sm text-neutral-100 font-weight-regular;
   font-family: var(--font-poppins);

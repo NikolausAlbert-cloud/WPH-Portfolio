@@ -1,12 +1,27 @@
 import { Building, CalendarDays } from 'lucide-react';
 
 import { careerJourneyData } from '@/constants/career_journeyData';
+import {motion} from "framer-motion";
 
 // import Career_journeyLine from '../client_component/career_journeyLine';
 
+const lineVariants = {
+  initial: {
+    height: 0,
+  },
+  animate: {
+    height: '100%',
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+};
+
 const Career_journeyCard = () => {
   return (
-    <div className='flex flex-col gap-4 md:gap-6'>
+    <div 
+    className='flex flex-col gap-4 md:gap-6 [&>div]:last:[&>div]:first:h-[calc(100%-1rem)] md:[&>div]:last:[&>div]:first:h-[calc(100%-1.5rem)]'>
       {careerJourneyData.map((item, i) => (
         <div key={i} className='grid grid-cols-[5px_auto] gap-2 md:gap-6'>
           <div className='relative w-5'>
@@ -14,6 +29,9 @@ const Career_journeyCard = () => {
             {/* <Career_journeyLine /> */}
             <div
               className='line-decoration absolute left-1/2 w-1 translate-x-[-50%] h-[calc(100%+1rem)] md:h-[calc(100%+1.5rem)] bg-gradient-to-b from-pink-600 to-purple-500'
+              variants={lineVariants}
+              initial='initial'
+              animate='animate'
             />
             {/* circle */}
             <span className='ring-primary-100 absolute inset-0 size-5 rounded-full bg-gradient-to-r from-pink-600 to-purple-500 ring-5 ring-inset'></span>

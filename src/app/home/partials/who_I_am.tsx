@@ -3,7 +3,7 @@ import React from 'react'
 
 const Who_I_am = () => {
   return (
-    <section className="relative">
+    <section id="about" className="relative">
       <div       
       className="custom-container flex-center flex-col"
       style={{

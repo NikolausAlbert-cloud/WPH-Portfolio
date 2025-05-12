@@ -4,7 +4,7 @@ import ProjectExpCard from '@/components/component/projectExpCard';
 
 const Project_exp = () => {
   return (
-    <section className='custom-container py-10 md:py-20'>
+    <section id="projects" className='custom-container py-10 md:py-20'>
       <div className='mb-8 flex flex-col gap-3 md:mb-12 md:flex-row md:gap-7'>
         <h2 className='display-sm-bold md:display-2xl-extraboldtext-neutral-100 text-left'>
           Experience in Front-End Development

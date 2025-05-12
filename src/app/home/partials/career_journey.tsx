@@ -6,7 +6,6 @@ import Section from '@/components/layouts/section';
 const Career_journey = () => {
   return (
     <Section
-      id='career-jorney'
       title='Career Journey'
       description='A visual timeline of key milestones and experiences from over the years.'
     >
