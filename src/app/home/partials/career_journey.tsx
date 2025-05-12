@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Career_journeyCard from '@/components/component/career_jorneyCard';
+import Career_journeyCard from '@/components/component/career_journeyCard';
 import Section from '@/components/layouts/section';
 
 const Career_journey = () => {

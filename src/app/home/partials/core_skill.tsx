@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
@@ -6,6 +9,51 @@ import { Progress } from '@/components/ui/progress';
 import Skill_card from '@/components/ui/skill_card';
 
 import { coreSkillData } from '@/constants/coreSkill_data';
+
+const orbitVariants = {
+  hidden: {
+    hidden: {
+      rotate:0,
+    },
+  },
+  visible: {
+    rotate: 360,
+    transition: {
+      repeat: Infinity,
+      duration: 15,
+      ease: "linear"
+    },
+  },
+};
+
+const skillImageVariants = {
+  hidden: {
+    hidden: {
+      scale: 0.5,
+    },
+  },
+  visible: {
+    scale: 1.5,
+    transition: {
+      repeat: Infinity,
+      duration: 5,
+      ease: "easInOut"
+    },
+  },
+};
+
+const lineVariants = {
+  hidden: {
+    width:"0%"
+  },
+  visible: {
+    width: "100%",
+    transition: {
+      duration: 3,
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const Core_skill = () => {
   return (
@@ -16,7 +64,12 @@ const Core_skill = () => {
       className='w-full'
     >
       <div className='flex flex-wrap items-center gap-26'>
-        <div className='flex-center relative flex-[6.8] basis-80'>
+        <motion.div 
+          className='flex-center relative flex-[6.8] basis-80'
+          variants={orbitVariants}
+          initial="hidden"
+          animate="visible"  
+        >
           <Image
             src='/images/orbits.svg'
             alt='orbit'
@@ -99,12 +152,12 @@ const Core_skill = () => {
               }}
             />
           </Skill_card>
-        </div>
+        </motion.div>
         <div
-          className='flex justify-center flex-[3.2] basis-80 flex-col gap-6 md:gap-5'
+          className='flex flex-[3.2] basis-80 flex-col justify-center gap-6 md:gap-5'
           style={{
-            width:"clamp(20rem, 38.82vw, 29.31rem)",
-            height:"clamp(23.25rem, 35.10vw, 26.5rem)"
+            width: 'clamp(20rem, 38.82vw, 29.31rem)',
+            height: 'clamp(23.25rem, 35.10vw, 26.5rem)',
           }}
         >
           {coreSkillData.map((item) => (
@@ -112,10 +165,15 @@ const Core_skill = () => {
               key={item.skill}
               className='flex flex-col gap-[6px] leading-3 md:gap-3'
             >
-              <div className='flex-between text-sm-semibold md:text-md-semibold leading-6 md:leading-7.5'>
+              <motion.div
+                className="flex-between text-sm-semibold md:text-md-semibold md:leading-7.5 leading-6"
+                variants={lineVariants}
+                initial='hidden'
+                animate='visible'
+              >
                 <h4>{item.skill}</h4>
                 <p>{item.percentage}%</p>
-              </div>
+              </motion.div>
               <Progress value={item.percentage} />
             </div>
           ))}
