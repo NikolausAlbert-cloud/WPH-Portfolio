@@ -27,10 +27,10 @@ const What_people_say = () => {
           overflow: 'hidden',
         }}
       >
-        <Marquee className='[--duration:12s]'>
+        <Marquee className='[--duration:16s]'>
           <ReviewCard />
         </Marquee>
-        <Marquee className='[--duration:16s]' reverse>
+        <Marquee className='[--duration:12s]' reverse>
           <ReviewCard />
         </Marquee>
         <div className='absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-neutral-600 to-transparent'></div>

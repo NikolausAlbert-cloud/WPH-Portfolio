@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -11,6 +14,8 @@ type SectionProps = {
   title: string;
   description: string;
   id: string;
+  variants?: any;
+  view?: string;
 };
 
 const Section: React.FC<SectionProps> = ({
@@ -19,26 +24,28 @@ const Section: React.FC<SectionProps> = ({
   classNameContainer_l,
   classNameContainer_r,
   title,
-  description,
   id,
+  description,
+  variants,
+  view,
 }) => {
   return (
     <section
       id={id}
       className={cn('custom-container py-10 md:py-20', className)}
     >
-      <div className={cn('text-center', classNameContainer_l)}>
-        <h2
-          className={
-            'display-sm-extrabold md:display-2xl-extrabold text-neutral-100'
-          }
-        >
+      <motion.div 
+        className={cn('text-center', classNameContainer_l)}
+        variants={variants}
+        whileInView={view}  
+      >
+        <h2 className={'display-sm-extrabold md:display-2xl-extrabold text-neutral-100'}>
           {title}
         </h2>
         <p className='text-sm-regular md:text-md-regular pt-3 text-neutral-200'>
           {description}
         </p>
-      </div>
+      </motion.div>
       <div className={cn('pt-8 md:pt-12', classNameContainer_r)}>
         {children}
       </div>

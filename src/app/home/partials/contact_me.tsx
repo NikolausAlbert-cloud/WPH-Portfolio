@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { ClockLoader } from 'react-spinners';
 import { z } from 'zod';
 import 'dotenv/config';
+import { motion } from 'framer-motion';
 
 import Section from '@/components/layouts/section';
 import { Button } from '@/components/ui/button';
@@ -21,6 +22,34 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 import Message_status from './message_status';
+
+const contactTitleVariants = {
+  view: {
+    x: [-200, 0],
+    skewX: [-7, 0],
+    transition: {
+      duration: 3,
+      type: "spring",
+      mass: 8,
+      when:"beforeChildren",
+    },
+  },
+};
+
+const contactFormVariants = {
+  hidden: {
+    boxShadow: '5px 5px 6px -1px #FFFFFF',
+  },
+  visible: {
+    boxShadow: '5px 5px 45px 22px #FFFFFF',
+    transition: {
+      repeat: Infinity,
+      repeatType: 'reverse',
+      ease: 'linear',
+      duration: 7,
+    },
+  },
+};
 
 const contactSchema = z.object({
   name: z
@@ -81,12 +110,19 @@ const Contact_me = () => {
       description='Feel free to drop a message for any inquiries or collaborations.'
       className='grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
       classNameContainer_l='flex-center flex-col'
+      variants={contactTitleVariants}
+      view="view"
     >
       <Form {...form}>
-        <div className='from-neutral-350 max-w-120 rounded-4xl bg-gradient-to-t to-neutral-100 p-[1px]'>
+        <motion.div
+          className='from-neutral-350 max-w-120 rounded-4xl bg-gradient-to-t to-neutral-100 p-[1px]'
+          variants={contactFormVariants}
+          initial='hidden'
+          animate='visible'
+        >
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className='bg-neutral-350 before:opacity-5 mx-auto max-w-120 space-y-4 rounded-4xl p-6 md:space-y-5'
+            className='bg-neutral-350 mx-auto max-w-120 space-y-4 rounded-4xl p-6 before:opacity-5 md:space-y-5'
           >
             <FormField
               control={form.control}
@@ -132,7 +168,7 @@ const Contact_me = () => {
               {loading ? <ClockLoader /> : 'Send'}
             </Button>
           </form>
-        </div>
+        </motion.div>
       </Form>
       <Message_status
         variant={variant}
