@@ -7,11 +7,11 @@ const lineVariants = {
   initial: {
     height: 0,
   },
-  animate: {
+  view: {
     height: '108%',
     transition: {
       duration: 3,
-      ease: 'easeInOut',
+      ease: 'easeIn',
     },
   },
 };
@@ -22,7 +22,7 @@ const Career_journeyLine = () => {
       className='absolute left-1/2 w-1 translate-x-[-50%] bg-gradient-to-b from-pink-600 to-purple-500'
       variants={lineVariants}
       initial='initial'
-      animate='animate'
+      whileInView='view'
     />
   );
 };

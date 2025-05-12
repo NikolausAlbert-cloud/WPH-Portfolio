@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="custom-container flex justify-start flex-col-reverse md:justify-between md:flex-row items-start  md:items-center  gap-6 py-10 md:py-7.5 ">
         <div className="flex flex-row items-center gap-4">
           <Image
-            src="/icons/logo.jpg"
-            alt="company-logo"
+            src="/icons/logoCo.svg"
+            alt="logoCo"
             width={40}
             height={40}
           />

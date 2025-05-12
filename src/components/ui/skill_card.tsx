@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, scale } from 'framer-motion';
 import React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -8,19 +8,29 @@ import { cn } from '@/lib/utils';
 const planetVariants = {
   hidden: {
     rotate: 0,
-    boxShadow: "-12px 4px 23px -26px rgba(138,19,237,0.26)"
+    boxShadow: "0px 1px 2px 3px rgba(255,112,124,0.74)",
+    scale: 0.5,
   },
   visible: {
     rotate: -360,
-    boxShadow: "-13px 25px 43px 24px rgba(138,19,237,0.55)",
+    boxShadow: "0px 1px 35px 10px rgba(161,16,145,0.37)",
+    scale: 1,
     transition: {
       duration: 15,
       repeat: Infinity,
       boxShadow: {
         repeat: Infinity,
         repeatType: "reverse",
-        duration: 15,
-        ease: "easeInOut"
+        duration: 5,
+        ease: "easeInOut",
+        
+      },
+      scale: {
+        repeat: Infinity,
+        repeatType: "reverse",
+        duration: 5,
+        ease: "linear",
+        
       },
       ease: 'linear',
     },

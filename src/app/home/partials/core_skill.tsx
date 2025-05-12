@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import Section from '@/components/layouts/section';
+import { NumberMotion } from '@/components/ui/numberMotion';
 import { Progress } from '@/components/ui/progress';
 import Skill_card from '@/components/ui/skill_card';
 
@@ -13,7 +14,7 @@ import { coreSkillData } from '@/constants/coreSkill_data';
 const orbitVariants = {
   hidden: {
     hidden: {
-      rotate:0,
+      rotate: 0,
     },
   },
   visible: {
@@ -21,36 +22,7 @@ const orbitVariants = {
     transition: {
       repeat: Infinity,
       duration: 15,
-      ease: "linear"
-    },
-  },
-};
-
-const skillImageVariants = {
-  hidden: {
-    hidden: {
-      scale: 0.5,
-    },
-  },
-  visible: {
-    scale: 1.5,
-    transition: {
-      repeat: Infinity,
-      duration: 5,
-      ease: "easInOut"
-    },
-  },
-};
-
-const lineVariants = {
-  hidden: {
-    width:"0%"
-  },
-  visible: {
-    width: "100%",
-    transition: {
-      duration: 3,
-      ease: 'easeInOut',
+      ease: 'linear',
     },
   },
 };
@@ -64,11 +36,11 @@ const Core_skill = () => {
       className='w-full'
     >
       <div className='flex flex-wrap items-center gap-26'>
-        <motion.div 
+        <motion.div
           className='flex-center relative flex-[6.8] basis-80'
           variants={orbitVariants}
-          initial="hidden"
-          animate="visible"  
+          initial='hidden'
+          animate='visible'
         >
           <Image
             src='/images/orbits.svg'
@@ -165,15 +137,10 @@ const Core_skill = () => {
               key={item.skill}
               className='flex flex-col gap-[6px] leading-3 md:gap-3'
             >
-              <motion.div
-                className="flex-between text-sm-semibold md:text-md-semibold md:leading-7.5 leading-6"
-                variants={lineVariants}
-                initial='hidden'
-                animate='visible'
-              >
+              <div className='flex-between text-sm-semibold md:text-md-semibold leading-6 md:leading-7.5'>
                 <h4>{item.skill}</h4>
-                <p>{item.percentage}%</p>
-              </motion.div>
+                <NumberMotion num={item.percentage} />
+              </div>
               <Progress value={item.percentage} />
             </div>
           ))}
