@@ -23,7 +23,7 @@ export const NumberMotion: React.FC<NumberMotionProps> = ({ num }) => {
     margin: '0px 0px -100px 0px',
   });
 
-  const [_, animate] = useAnimate();
+  const [, animate] = useAnimate();
   const startingValue = useMotionValue(0);
   
   const current = useTransform(
