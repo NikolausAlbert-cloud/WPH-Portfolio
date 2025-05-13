@@ -9,7 +9,7 @@ import Career_journeyLine from '../client_component/career_journeyLine';
 
 const Career_journeyCard: React.FC = () => {
   return (
-    <div className='flex flex-col gap-4 md:gap-6 [&>div]:last:[&>div]:first:h-[calc(100%-1rem)] md:[&>div]:last:[&>div]:first:h-[calc(100%-1.5rem)]'>
+    <div className='flex flex-col gap-4 md:gap-6 [&>div]:last:[&>div]:first:h-[calc(100%-2rem)] md:[&>div]:last:[&>div]:first:h-[calc(100%-1.5rem)]'>
       {careerJourneyData.map((item, i) => (
         <div key={i} className='grid grid-cols-[5px_auto] gap-2 md:gap-6'>
           <div className='relative w-5'>
