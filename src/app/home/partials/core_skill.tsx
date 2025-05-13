@@ -4,13 +4,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
+import Skill_progressBar from '@/components/client_component/skill_progressBar';
 import Section from '@/components/layouts/section';
-import { NumberMotion } from '@/components/ui/numberMotion';
-import { Progress } from '@/components/ui/progress';
 import Skill_card from '@/components/ui/skill_card';
 
 import { coreSkillData } from '@/constants/coreSkill_data';
-import Skill_progressBar from '@/components/client_component/skill_progressBar';
 
 const orbitVariants = {
   hidden: {
@@ -29,9 +27,8 @@ const orbitVariants = {
 };
 
 const Core_skill = () => {
-
   // const [progress, setProgress] = React.useState(0)
- 
+
   // React.useEffect(() => {
   //   const timer = setTimeout(() => setProgress(66), 500)
   //   return () => clearTimeout(timer)
@@ -142,16 +139,6 @@ const Core_skill = () => {
           }}
         >
           {coreSkillData.map((item) => (
-            // <div
-            //   key={item.skill}
-            //   className='flex flex-col gap-[6px] leading-3 md:gap-3'
-            // >
-            //   <div className='flex-between text-sm-semibold md:text-md-semibold leading-6 md:leading-7.5'>
-            //     <h4>{item.skill}</h4>
-            //     <NumberMotion num={item.percentage} />
-            //   </div>
-            //   <Progress value={item.percentage} />
-            // </div>
             <div key={item.skill}>
               <Skill_progressBar
                 skill={item.skill}

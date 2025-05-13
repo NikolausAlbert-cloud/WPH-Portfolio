@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react'
 
 import { cn } from '@/lib/utils';
@@ -12,7 +10,7 @@ type Skill_progressBarProps = {
   percentage: number;
 };
 
-const Skill_progressBar: React.FC<Skill_progressBarProps[]> = ({
+const Skill_progressBar: React.FC<Skill_progressBarProps> = ({
   skill,
   percentage,
 }) => {
@@ -22,7 +20,7 @@ const Skill_progressBar: React.FC<Skill_progressBarProps[]> = ({
   React.useEffect(() => {
     const timer = setTimeout(() => setProgress(percentage), 1000)
     return () => clearTimeout(timer)
-  }, [])
+  }, [percentage])
 
   return (
     <div className={cn('flex flex-col gap-[6px] leading-3 md:gap-3')}>
