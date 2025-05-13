@@ -1,25 +1,25 @@
-import { StaticImageData } from "next/image"
+import { StaticImageData } from 'next/image';
 
-import  Dribble  from "../../public/icons/dribbble.png"; 
-import  Instagram  from "../../public/icons/instagram.png"; 
-import  Linkedin  from "../../public/icons/linkedin.png"; 
+import Dribble from '../../public/icons/dribbble.png';
+import Instagram from '../../public/icons/instagram.png';
+import Linkedin from '../../public/icons/linkedin.png';
 
 type SocialMediaProps = {
   src: StaticImageData;
   alt: string;
-}
+};
 
 export const SocialMedia: SocialMediaProps[] = [
   {
     src: Dribble,
-    alt: "dribble"
+    alt: 'dribble',
   },
   {
     src: Instagram,
-    alt: "instagram"
+    alt: 'instagram',
   },
   {
     src: Linkedin,
-    alt: "linkedin"
-  }
-]
+    alt: 'linkedin',
+  },
+];

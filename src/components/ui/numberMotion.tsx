@@ -25,7 +25,7 @@ export const NumberMotion: React.FC<NumberMotionProps> = ({ num }) => {
 
   const [_, animate] = useAnimate();
   const startingValue = useMotionValue(0);
-
+  
   const current = useTransform(
     startingValue,
     (value) => Math.round(value).toLocaleString() + ' %'
@@ -34,7 +34,7 @@ export const NumberMotion: React.FC<NumberMotionProps> = ({ num }) => {
   useEffect(() => {
     if (isInView) {
       animate(startingValue, num, {
-        duration: 7,
+        duration: 6,
         ease: 'circIn',
       });
     }

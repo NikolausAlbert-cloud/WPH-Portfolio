@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Menu, Mail, Repeat } from 'lucide-react';
+import { Menu, Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -26,8 +26,6 @@ const logoVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      type: 'spring',
-      repeatType: 'reverse',
     },
   },
 };

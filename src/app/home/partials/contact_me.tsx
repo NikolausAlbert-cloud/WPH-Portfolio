@@ -2,12 +2,13 @@
 
 import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ClockLoader } from 'react-spinners';
 import { z } from 'zod';
 import 'dotenv/config';
-import { motion } from 'framer-motion';
+
 
 import Section from '@/components/layouts/section';
 import { Button } from '@/components/ui/button';
@@ -29,9 +30,9 @@ const contactTitleVariants = {
     skewX: [-7, 0],
     transition: {
       duration: 3,
-      type: "spring",
+      type: 'spring',
       mass: 8,
-      when:"beforeChildren",
+      when: 'beforeChildren',
     },
   },
 };
@@ -111,7 +112,7 @@ const Contact_me = () => {
       className='grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
       classNameContainer_l='flex-center flex-col'
       variants={contactTitleVariants}
-      view="view"
+      view='view'
     >
       <Form {...form}>
         <motion.div
