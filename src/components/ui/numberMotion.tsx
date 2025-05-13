@@ -12,7 +12,7 @@ import {
 import React, { useEffect, useRef } from 'react';
 
 type NumberMotionProps = {
-  num?: number;
+  num: number;
 }
 
 export const NumberMotion: React.FC<NumberMotionProps> = ({ num }) => {

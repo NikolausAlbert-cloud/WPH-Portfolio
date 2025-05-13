@@ -1,6 +1,6 @@
 type coreSkillDataProps = {
   skill: string;
-  percentage?: number;
+  percentage: number;
 };
 
 export const coreSkillData: coreSkillDataProps[] = [

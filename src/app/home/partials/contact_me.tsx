@@ -2,7 +2,7 @@
 
 import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ClockLoader } from 'react-spinners';
@@ -37,7 +37,7 @@ const contactTitleVariants = {
   },
 };
 
-const contactFormVariants = {
+const contactFormVariants: Variants = {
   hidden: {
     boxShadow: '5px 5px 6px -1px #FFFFFF',
   },
