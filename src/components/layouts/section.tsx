@@ -13,7 +13,7 @@ type SectionProps = {
   style?: object;
   title: string;
   description: string;
-  id: string;
+  id?: string;
   variants?: any;
   view?: string;
 };

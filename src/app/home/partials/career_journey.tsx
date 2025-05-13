@@ -7,6 +7,7 @@ const Career_journey = () => {
   return (
     <Section
       title='Career Journey'
+      id='Career Journey'
       description='A visual timeline of key milestones and experiences from over the years.'
     >
       <Career_journeyCard />
