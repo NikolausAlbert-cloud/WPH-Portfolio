@@ -34,7 +34,7 @@ export const NumberMotion: React.FC<NumberMotionProps> = ({ num }) => {
   useEffect(() => {
     if (isInView) {
       animate(startingValue, num, {
-        duration: 6,
+        duration: 3,
         ease: 'circIn',
       });
     }
