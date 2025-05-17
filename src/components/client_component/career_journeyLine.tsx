@@ -1,8 +1,9 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import React from 'react';
+
+import { cn } from '@/lib/utils';
 
 const lineVariants = {
   initial: {
@@ -19,12 +20,17 @@ const lineVariants = {
 
 type Career_journeyLineProps = {
   className?: string;
-}
+};
 
-const Career_journeyLine: React.FC<Career_journeyLineProps> = ({className}) => {
+const Career_journeyLine: React.FC<Career_journeyLineProps> = ({
+  className,
+}) => {
   return (
     <motion.div
-      className={cn('absolute left-1/2 w-1 translate-x-[-50%] bg-gradient-to-b from-pink-600 to-purple-500', className)}
+      className={cn(
+        'absolute left-1/2 w-1 translate-x-[-50%] bg-gradient-to-b from-pink-600 to-purple-500',
+        className
+      )}
       variants={lineVariants}
       initial='initial'
       whileInView='view'

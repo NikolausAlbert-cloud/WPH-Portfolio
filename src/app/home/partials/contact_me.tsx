@@ -2,7 +2,7 @@
 
 import emailjs from '@emailjs/browser';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ClockLoader } from 'react-spinners';
@@ -23,7 +23,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 import Message_status from './message_status';
 
-const contactTitleVariants = {
+const contactTitleVariants: Variants = {
   view: {
     x: [-200, 0],
     skewX: [-7, 0],
@@ -31,7 +31,7 @@ const contactTitleVariants = {
       duration: 3,
       type: 'spring',
       mass: 8,
-      damping: 10,
+      damping: 5,
       when: 'beforeChildren',
     },
   },
@@ -154,11 +154,12 @@ const Contact_me = () => {
           position: 'absolute',
           backgroundImage: 'url(/background/hero-circle-decoration.png)',
           backgroundSize: 'cover',
-          right: '-20%',
+          right: '0%',
           bottom: 0,
           backgroundRepeat: 'no-repeat',
           width: '50rem',
           height: '40rem',
+          zIndex: -1,
         }}
       />
       <div
@@ -166,11 +167,12 @@ const Contact_me = () => {
           position: 'absolute',
           backgroundImage: 'url(/background/hero-ellipse-decoration.svg)',
           backgroundSize: 'cover',
-          right: '-10%',
+          right: '0%',
           bottom: 0,
           backgroundRepeat: 'no-repeat',
           width: '50rem',
           height: '40rem',
+          zIndex: -1,
         }}
       />
       <Message_status
