@@ -9,7 +9,6 @@ import { ClockLoader } from 'react-spinners';
 import { z } from 'zod';
 import 'dotenv/config';
 
-
 import Section from '@/components/layouts/section';
 import { Button } from '@/components/ui/button';
 import {
@@ -32,22 +31,8 @@ const contactTitleVariants = {
       duration: 3,
       type: 'spring',
       mass: 8,
+      damping: 10,
       when: 'beforeChildren',
-    },
-  },
-};
-
-const contactFormVariants: Variants = {
-  hidden: {
-    boxShadow: '5px 5px 6px -1px #FFFFFF',
-  },
-  visible: {
-    boxShadow: '5px 5px 45px 22px #FFFFFF',
-    transition: {
-      repeat: Infinity,
-      repeatType: 'reverse',
-      ease: 'linear',
-      duration: 7,
     },
   },
 };
@@ -109,68 +94,85 @@ const Contact_me = () => {
       id='contact'
       title='Contact Me'
       description='Feel free to drop a message for any inquiries or collaborations.'
-      className=' relative grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
+      className='relative grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
       classNameContainer_l='flex-center flex-col'
       variants={contactTitleVariants}
       view='view'
     >
       <Form {...form}>
-        <motion.div
-          className='from-neutral-350 max-w-120 rounded-4xl bg-gradient-to-t to-neutral-100 p-[1px]'
-          variants={contactFormVariants}
-          initial='hidden'
-          animate='visible'
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className='bg-neutral-350 mx-auto max-w-120 space-y-4 rounded-4xl p-6 before:opacity-5 md:space-y-5'
         >
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className='bg-neutral-350 mx-auto max-w-120 space-y-4 rounded-4xl p-6 before:opacity-5 md:space-y-5'
-          >
-            <FormField
-              control={form.control}
-              name='name'
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input disabled={loading} placeholder='Name' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='email'
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input disabled={loading} placeholder='Email' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='message'
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Textarea
-                      disabled={loading}
-                      placeholder='Message'
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button disabled={loading} type='submit' className='w-full'>
-              {loading ? <ClockLoader /> : 'Send'}
-            </Button>
-          </form>
-        </motion.div>
+          <FormField
+            control={form.control}
+            name='name'
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input disabled={loading} placeholder='Name' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='email'
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input disabled={loading} placeholder='Email' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='message'
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Textarea
+                    disabled={loading}
+                    placeholder='Message'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button disabled={loading} type='submit' className='w-full'>
+            {loading ? <ClockLoader /> : 'Send'}
+          </Button>
+        </form>
       </Form>
+      <div
+        style={{
+          position: 'absolute',
+          backgroundImage: 'url(/background/hero-circle-decoration.png)',
+          backgroundSize: 'cover',
+          right: '-20%',
+          bottom: 0,
+          backgroundRepeat: 'no-repeat',
+          width: '50rem',
+          height: '40rem',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          backgroundImage: 'url(/background/hero-ellipse-decoration.svg)',
+          backgroundSize: 'cover',
+          right: '-10%',
+          bottom: 0,
+          backgroundRepeat: 'no-repeat',
+          width: '50rem',
+          height: '40rem',
+        }}
+      />
       <Message_status
         variant={variant}
         open={showDialog}

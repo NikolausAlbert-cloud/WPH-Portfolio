@@ -8,6 +8,18 @@ import { Marquee } from '@/components/ui/marquee';
 const What_people_say = () => {
   return (
     <section className='relative my-20'>
+      <div 
+      style={{ 
+        position: 'absolute',
+        backgroundImage: 'url(/background/hero-ellipse-decoration.svg)',
+        backgroundSize: 'cover',
+        right: 0,
+        top: "-20%",
+        backgroundRepeat: 'no-repeat',
+        width: "50rem",
+        height: "40rem",
+      }}
+      />
       <div className='text-center'>
         <h2 className='display-sm-extrabold md:display-2xl-extrabold text-neutral-100'>
           What People Say About Me
@@ -33,8 +45,8 @@ const What_people_say = () => {
         <Marquee className='[--duration:12s]' reverse>
           <ReviewCard />
         </Marquee>
-        <div className='absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-neutral-600 to-transparent'></div>
-        <div className='absolute inset-y-0 right-0 w-[20%] bg-gradient-to-l from-neutral-600 to-transparent'></div>
+        <div className='absolute inset-y-0 left-0 w-[20%] md:bg-gradient-to-r from-neutral-600 to-transparent'></div>
+        <div className='absolute inset-y-0 right-0 w-[20%] md:bg-gradient-to-l from-neutral-600 to-transparent'></div>
       </div>
     </section>
   );

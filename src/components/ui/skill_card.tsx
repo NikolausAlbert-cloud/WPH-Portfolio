@@ -8,23 +8,23 @@ import { cn } from '@/lib/utils';
 const planetVariants = {
   hidden: {
     rotate: 0,
-    boxShadow: "0px 1px 2px 3px rgba(255,112,124,0.74)",
+    // boxShadow: "0px 1px 2px 3px rgba(255,112,124,0.74)",
     scale: 0.5,
   },
   visible: {
     rotate: -360,
-    boxShadow: "0px 1px 35px 10px rgba(161,16,145,0.37)",
+    // boxShadow: "0px 1px 35px 10px rgba(161,16,145,0.37)",
     scale: 1,
     transition: {
       duration: 15,
       repeat: Infinity,
-      boxShadow: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 5,
-        ease: "easeInOut",
+      // boxShadow: {
+      //   repeat: Infinity,
+      //   repeatType: "reverse",
+      //   duration: 5,
+      //   ease: "easeInOut",
         
-      },
+      // },
       scale: {
         repeat: Infinity,
         repeatType: "reverse",

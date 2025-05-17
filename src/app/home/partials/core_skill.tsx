@@ -46,7 +46,6 @@ const Core_skill = () => {
           width: "30rem",
           height: "40rem",
           rotate: "180deg",
-          // backgroundColor: "red",
         }}
         />
         <motion.div

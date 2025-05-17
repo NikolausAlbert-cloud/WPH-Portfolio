@@ -9,7 +9,7 @@ const Table_radixUi = ({
 }: React.ComponentProps<typeof Table.Root>) => {
   return (
     <Table.Root
-      className={cn('rounded-3xl bg-neutral-400 p-6', className)}
+      className={cn('rounded-3xl bg-neutral-500 p-6', className)}
       {...props}
     />
   );
@@ -41,7 +41,9 @@ const TableRow_radixUi = ({
   className,
   ...props
 }: React.ComponentProps<typeof Table.Row>) => {
-  return <Table.Row className={cn(className)} {...props} />;
+  return <Table.Row 
+  className={cn("border-neutral-400 border-t-1 first:border-t-0", className)} {...props}
+  />;
 };
 
 const TableColumHeaderCell_radixUi = ({
