@@ -28,10 +28,40 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='custom-container flex-center flex-col items-center'
-      style={{ marginTop: 'clamp(6.5rem, 18.38vw, 13.88rem)' }}
+      className='custom-container relative flex-center flex-col items-center'
+      style={{ 
+        paddingTop: 'clamp(6.5rem, 18.38vw, 13.88rem)', 
+        backgroundImage: 'url(/background/repeatedBoxFrames_desktop.svg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'repeat',
+      }}
       ref={containerRef}
     >
+      <div 
+      style={{ 
+        position: 'absolute',
+        backgroundImage: 'url(/background/hero-ellipse-decoration.svg)',
+        backgroundSize: 'cover',
+        right: "0",
+        backgroundRepeat: 'no-repeat',
+        width: "50rem",
+        height: "40rem",
+      }}
+      />
+      <div
+      style={{ 
+        position: 'absolute',
+        backgroundImage: 'url(/background/hero-circle-decoration.png)',
+        backgroundSize: 'cover',
+        left: "0%",
+        top: "20%",
+        opacity: "0.5",
+        backgroundRepeat: 'no-repeat',
+        width: "20rem",
+        height: "40rem",
+      }}
+      />
       <div className='rounded-full bg-gradient-to-r from-pink-600 to-purple-500 p-0.25 shadow-[0_0_17px_rgba(135,70,235,1)]'>
         <div className='text-xs-medium md:text-md-medium rounded-full bg-neutral-500 px-6 py-2'>
           <span className='animate-pulse'>&#128100;</span>

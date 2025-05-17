@@ -27,12 +27,6 @@ const orbitVariants = {
 };
 
 const Core_skill = () => {
-  // const [progress, setProgress] = React.useState(0)
-
-  // React.useEffect(() => {
-  //   const timer = setTimeout(() => setProgress(66), 500)
-  //   return () => clearTimeout(timer)
-  // }, [])
 
   return (
     <Section
@@ -41,7 +35,20 @@ const Core_skill = () => {
       description='An overview of the key technologies and frameworks I specialize in'
       className='w-full'
     >
-      <div className='flex flex-wrap items-center gap-26'>
+      <div className='relative flex flex-wrap items-center gap-26'>
+        <div 
+        style={{ 
+          position: 'absolute',
+          backgroundImage: 'url(/background/hero-ellipse-decoration.svg)',
+          backgroundSize: 'cover',
+          left: "0%",
+          backgroundRepeat: 'no-repeat',
+          width: "30rem",
+          height: "40rem",
+          rotate: "180deg",
+          // backgroundColor: "red",
+        }}
+        />
         <motion.div
           className='flex-center relative flex-[6.8] basis-80'
           variants={orbitVariants}

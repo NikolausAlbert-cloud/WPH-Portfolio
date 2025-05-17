@@ -13,7 +13,7 @@ import Why_standout_table from './home/partials/why_standout_table';
 
 export default function Home() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col item-center justify-center'>
       <Navbar />
       <Hero />
       <Hero_picture />

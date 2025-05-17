@@ -42,8 +42,20 @@ const navbarMenuVariants = {
 
 const Navbar = () => {
   return (
-    <header className='fixed top-0 z-50 w-full bg-neutral-600'>
-      <div className='flex-between custom-container relative h-16 md:h-21'>
+    <header 
+    className='fixed top-0 z-50 bg-neutral-600 w-full'
+  
+    >
+      <div 
+      className='flex-between custom-container relative h-16 md:h-21'
+      style={{ 
+        backgroundImage: 'url(/background/header-ellipse-decoration.svg)',
+        backgroundSize: 'auto',
+        backgroundPosition: '-20% 70%',
+        backgroundRepeat: 'no-repeat',
+        zIndex: 1,
+      }}
+      >
         <motion.div
           variants={logoVariants}
           initial='hidden'

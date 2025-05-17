@@ -109,7 +109,7 @@ const Contact_me = () => {
       id='contact'
       title='Contact Me'
       description='Feel free to drop a message for any inquiries or collaborations.'
-      className='grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
+      className=' relative grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-56'
       classNameContainer_l='flex-center flex-col'
       variants={contactTitleVariants}
       view='view'
