@@ -43,7 +43,7 @@ const navbarMenuVariants = {
 const Navbar = () => {
   return (
     <header 
-    className='fixed top-0 z-50 bg-neutral-600 w-full'
+    className='custom-container fixed top-0 z-50 bg-neutral-600 w-full'
   
     >
       <div 

@@ -30,7 +30,7 @@ const Who_I_am = () => {
         className='custom-container flex-center flex-col'
         style={{
           margin: 'auto',
-          marginTop: 'clamp(-2.81rem, 13.25vw, -10rem)',
+          // marginTop: 'clamp(-2.81rem, 13.25vw, -10rem)',
           gap: 'clamp(2.5rem, 6.62vw, 5rem)',
         }}
       >

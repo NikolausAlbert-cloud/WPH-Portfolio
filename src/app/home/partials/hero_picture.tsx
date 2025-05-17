@@ -32,7 +32,7 @@ const Hero_picture = () => {
         </Button>
       </div>
       <motion.div
-        style={{
+       style={{
           backgroundImage: 'url(/images/wave.svg)',
           backgroundSize: 'cover',
           backgroundRepeat: 'repeat',
@@ -45,7 +45,8 @@ const Hero_picture = () => {
         variants={waveVariants}
         initial='hidden'
         animate='visible'
-      />
+      >
+      </motion.div>
     </section>
   );
 };
