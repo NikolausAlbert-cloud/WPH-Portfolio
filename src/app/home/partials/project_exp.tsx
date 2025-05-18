@@ -6,7 +6,7 @@ const Project_exp = () => {
   return (
     <section id="projects" className='custom-container py-10 md:py-20'>
       <div className='mb-8 flex flex-col gap-3 md:mb-12 md:flex-row md:gap-7'>
-        <h2 className='display-sm-bold md:display-2xl-extraboldtext-neutral-100 text-left'>
+        <h2 className='display-sm-bold md:display-2xl-extrabold text-neutral-100 text-left'>
           Experience in Front-End Development
         </h2>
         <p className='text-sm-regular md:text-md-regular text-left md:text-right text-neutral-200'>

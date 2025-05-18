@@ -157,8 +157,8 @@ const Contact_me = () => {
           right: '0%',
           bottom: 0,
           backgroundRepeat: 'no-repeat',
-          width: '50rem',
-          height: '40rem',
+          width: 'clamp(2.5rem, 9.93vw, 7.5rem)',
+          height: 'clamp(2.5rem, 9.93vw, 7.5rem)',
           zIndex: -1,
         }}
       />
@@ -170,8 +170,8 @@ const Contact_me = () => {
           right: '0%',
           bottom: 0,
           backgroundRepeat: 'no-repeat',
-          width: '50rem',
-          height: '40rem',
+          width: 'clamp(2.5rem, 9.93vw, 7.5rem)',
+          height: 'clamp(2.5rem, 9.93vw, 7.5rem)',
           zIndex: -1,
         }}
       />

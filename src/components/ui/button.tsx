@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-gradient-to-r from-pink-600 to-purple-500 text-md-medium text-neutral-100 rounded-full hover:shadow-[0_0_17px_rgba(135,70,235,1)]',
+          'bg-gradient-to-r from-pink-600 to-purple-500 text-md-medium text-neutral-100 rounded-full hover:shadow-[0_0_17px_rgba(135,70,235,1)] hover:scale-105 transform duration-100 ease-in-out',
       },
       size: {
         default: 'h-12 px-3 md:px-12',

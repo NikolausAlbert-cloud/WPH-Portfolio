@@ -31,10 +31,9 @@ const Who_I_am = () => {
   return (
     <section id='about' className='relative'>
       <div
-        className='custom-container flex-center flex-col'
+        className='custom-container flex-center flex-col -mt-11 md:-mt-15 lg:-mt-20'
         style={{
           margin: 'auto',
-          marginTop: 'clamp(-2.81rem, 13.25vw, -10rem)',
           gap: 'clamp(2.5rem, 6.62vw, 5rem)',
         }}
       >

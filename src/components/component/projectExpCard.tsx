@@ -12,7 +12,7 @@ export const ProjectExpCard = () => {
         <div
           key={i}
           style={{
-            width: 'clamp(20rem, 30.63vw, 23.13rem)',
+            width: 'clamp(18rem, 30.63vw, 23.13rem)',
           }}
         >
           <Image
