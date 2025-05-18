@@ -6,7 +6,7 @@ import { SocialMedia } from '@/constants/social_media';
 
 const Footer = () => {
   return (
-    <footer className='bg-neutral-500'>
+    <footer className='custom-container w-full bg-neutral-500'>
       <div 
         className='custom-container flex flex-col-reverse items-start justify-start gap-6 py-10 md:flex-row md:items-center md:justify-between md:py-7.5'
       >

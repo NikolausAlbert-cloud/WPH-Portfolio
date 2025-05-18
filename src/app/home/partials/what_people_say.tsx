@@ -7,7 +7,7 @@ import { Marquee } from '@/components/ui/marquee';
 
 const What_people_say = () => {
   return (
-    <section className='relative my-20'>
+    <section className='custom-container relative my-20'>
       <div 
       style={{ 
         position: 'absolute',
