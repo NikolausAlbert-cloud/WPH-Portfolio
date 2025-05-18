@@ -43,11 +43,11 @@ const navbarMenuVariants = {
 const Navbar = () => {
   return (
     <header 
-    className=' fixed top-0 left-[50%] translate-x-[-50%] z-50 bg-neutral-600 w-full'
+    className='custom-container fixed top-0 left-[50%] translate-x-[-50%] z-50 bg-neutral-600 w-full'
   
     >
       <div 
-      className='custom-container flex-between h-16 md:h-21 '
+      className=' flex-between h-16 md:h-21 '
       style={{ 
         backgroundImage: 'url(/background/header-ellipse-decoration.svg)',
         backgroundSize: 'auto',
