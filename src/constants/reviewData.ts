@@ -1,8 +1,8 @@
 import { StaticImageData } from 'next/image';
 
-import Person1_Picture from '../../public/reviewer/person1.jpg';
-import Person2_Picture from '../../public/reviewer/person2.jpg';
-import Person3_Picture from '../../public/reviewer/person3.jpg';
+import Person1_Picture from '../../public/reviewer/person1.svg';
+import Person2_Picture from '../../public/reviewer/person2.svg';
+import Person3_Picture from '../../public/reviewer/person3.svg';
 
 type ReviewDataProps = {
   src: StaticImageData;
