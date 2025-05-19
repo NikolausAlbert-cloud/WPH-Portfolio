@@ -58,7 +58,7 @@ const Hero = () => {
         top: "20%",
         opacity: "0.5",
         backgroundRepeat: 'no-repeat',
-        width: "40rem",
+        width: "20rem",
         aspectRatio: "1/1",
       }}
       />

@@ -53,7 +53,7 @@ const contactSchema = z.object({
 
 const Contact_me = () => {
   const [loading, setLoading] = React.useState(false);
-  const [showDialog, setShowDialog] = React.useState(true);
+  const [showDialog, setShowDialog] = React.useState(false);
   const [variant, setVariant] = React.useState<'success' | 'failed'>('success');
 
   const form = useForm<z.infer<typeof contactSchema>>({
