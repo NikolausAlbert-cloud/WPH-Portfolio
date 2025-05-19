@@ -30,7 +30,7 @@ const contactTitleVariants: Variants = {
     transition: {
       duration: 3,
       type: 'spring',
-      mass: 8,
+      mass: 1,
       damping: 5,
       when: 'beforeChildren',
     },
@@ -53,7 +53,7 @@ const contactSchema = z.object({
 
 const Contact_me = () => {
   const [loading, setLoading] = React.useState(false);
-  const [showDialog, setShowDialog] = React.useState(false);
+  const [showDialog, setShowDialog] = React.useState(true);
   const [variant, setVariant] = React.useState<'success' | 'failed'>('success');
 
   const form = useForm<z.infer<typeof contactSchema>>({
@@ -157,8 +157,8 @@ const Contact_me = () => {
           right: '0%',
           bottom: 0,
           backgroundRepeat: 'no-repeat',
-          width: 'clamp(2.5rem, 9.93vw, 7.5rem)',
-          height: 'clamp(2.5rem, 9.93vw, 7.5rem)',
+          width: "40rem",
+          aspectRatio: "1/1",
           zIndex: -1,
         }}
       />
@@ -170,8 +170,8 @@ const Contact_me = () => {
           right: '0%',
           bottom: 0,
           backgroundRepeat: 'no-repeat',
-          width: 'clamp(2.5rem, 9.93vw, 7.5rem)',
-          height: 'clamp(2.5rem, 9.93vw, 7.5rem)',
+          width: "40rem",
+          aspectRatio: "1/1",
           zIndex: -1,
         }}
       />

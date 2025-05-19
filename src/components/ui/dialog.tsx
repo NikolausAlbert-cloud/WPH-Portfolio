@@ -9,12 +9,7 @@ import { cn } from '@/lib/utils';
 function Dialog({
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Root>) {
-  return (
-    <DialogPrimitive.Root 
-      data-slot='dialog' 
-      {...props}
-    />
-  )
+  return <DialogPrimitive.Root data-slot='dialog' {...props} />;
 }
 
 function DialogTrigger({
@@ -62,7 +57,7 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot='dialog-content'
         className={cn(
-          ' data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-82 md:w-120 translate-x-[-50%] translate-y-[-50%] gap-6 rounded-lg py-8 md:py-10 px-6 md:px-8 shadow-lg duration-200 sm:max-w-lg',
+          'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-82 translate-x-[-50%] translate-y-[-50%] gap-6 rounded-lg px-6 py-8 shadow-lg duration-200 sm:max-w-lg md:w-120 md:px-8 md:py-10',
           className
         )}
         {...props}
@@ -117,7 +112,10 @@ function DialogTitle({
   return (
     <DialogPrimitive.Title
       data-slot='dialog-title'
-      className={cn('text-xl font-semibold leading-8 text-neutral-100 max-sm:text-lg-semibold', className)}
+      className={cn(
+        'max-sm:text-lg-semibold text-xl leading-8 font-semibold text-neutral-100',
+        className
+      )}
       {...props}
     />
   );
@@ -130,7 +128,10 @@ function DialogDescription({
   return (
     <DialogPrimitive.Description
       data-slot='dialog-description'
-      className={cn('text-center text-md-regular text-neutral-200 max-sm:text-sm-regular', className)}
+      className={cn(
+        'text-md-regular max-sm:text-sm-regular text-center text-neutral-200',
+        className
+      )}
       {...props}
     />
   );

@@ -45,8 +45,8 @@ const Hero = () => {
         backgroundSize: 'cover',
         right: "0",
         backgroundRepeat: 'no-repeat',
-        width: "clamp(2.5rem, 9.93vw, 7.5rem)",
-        height: "clamp(2.5rem, 9.93vw, 7.5rem)",
+        width: "40rem",
+        aspectRatio: "1/1",
       }}
       />
       <div
@@ -58,8 +58,8 @@ const Hero = () => {
         top: "20%",
         opacity: "0.5",
         backgroundRepeat: 'no-repeat',
-        width: "clamp(1.5rem, 9.93vw, 4.5rem)",
-        height: "clamp(2.5rem, 9.93vw, 7.5rem)",
+        width: "40rem",
+        aspectRatio: "1/1",
       }}
       />
       <div className='rounded-full bg-gradient-to-r from-pink-600 to-purple-500 p-0.25 shadow-[0_0_17px_rgba(135,70,235,1)]'>

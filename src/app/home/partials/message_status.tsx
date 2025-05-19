@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
@@ -28,19 +31,19 @@ const Message_status: React.FC<MessageStatusProps> = ({
     <Dialog {...props}>
       <DialogContent className='flex-center flex-col bg-transparent [&>button:last-child]:hidden'>
         <DialogHeader>
-            <Image
-              src={
-                variant === 'success'
-                  ? '/images/message_sent_ok.jpg'
-                  : '/images/message_sent_failed.svg'
-              }
-              alt={`${variant === 'success' ? 'successful' : 'failed'} message status`}
-              width={162}
-              height={162}
-              className={`${variant === "success" ? "mt-8 mb-6 max-sm:mb-4 max-sm:mt-6 max-sm:scale-85" : "scale-120"} rounded-2xl`}
-            />
+          <Image
+            src={
+              variant === 'success'
+                ? '/images/message_sent_ok.jpg'
+                : '/images/message_sent_failed.svg'
+            }
+            alt={`${variant === 'success' ? 'successful' : 'failed'} message status`}
+            width={162}
+            height={162}
+            className={`${variant === 'success' ? 'mt-8 mb-6 max-sm:mt-6 max-sm:mb-4 max-sm:scale-85' : 'scale-120'} rounded-2xl`}
+          />
         </DialogHeader>
-        <DialogBody className="flex-center flex-col">
+        <DialogBody className='flex-center flex-col'>
           <DialogTitle>
             {variant === 'success'
               ? 'Message sent successfully'
@@ -53,9 +56,15 @@ const Message_status: React.FC<MessageStatusProps> = ({
           </DialogDescription>
         </DialogBody>
         <DialogClose asChild>
-          <Button className="w-full text-sm-medium">
-            {loading ? 'Loading...' : 'Back to Home'}
-          </Button>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.5, duration: 2 } }}
+            className="w-full"
+          >
+            <Button className='text-sm-medium w-full'>
+              {loading ? 'Loading...' : 'Back to Home'}
+            </Button>
+          </motion.div>
         </DialogClose>
       </DialogContent>
     </Dialog>
@@ -63,4 +72,3 @@ const Message_status: React.FC<MessageStatusProps> = ({
 };
 
 export default Message_status;
-

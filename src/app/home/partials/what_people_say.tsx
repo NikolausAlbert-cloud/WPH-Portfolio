@@ -16,8 +16,8 @@ const What_people_say = () => {
         right: 0,
         top: "-20%",
         backgroundRepeat: 'no-repeat',
-        width: " clamp(2.5rem, 9.93vw, 7.5rem)",
-        height: " clamp(2.5rem, 9.93vw, 7.5rem)",
+        width: "40rem",
+        aspectRatio: "1/1",
       }}
       />
       <div className='text-center'>
