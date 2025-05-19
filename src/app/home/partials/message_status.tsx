@@ -29,7 +29,7 @@ const Message_status: React.FC<MessageStatusProps> = ({
 }) => {
   return (
     <Dialog {...props}>
-      <DialogContent className='flex-center flex-col bg-transparent [&>button:last-child]:hidden'>
+      <DialogContent className='custom-container flex-center flex-col bg-transparent [&>button:last-child]:hidden'>
         <DialogHeader>
           <Image
             src={
