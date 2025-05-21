@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
+const headingVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  inView: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+}
+
 const bubbleExpVariants = {
   hidden: {
     // boxShadow: '0px 1px 2px 3px rgba(255,112,124,0.74)',
@@ -37,7 +49,11 @@ const Who_I_am = () => {
           gap: 'clamp(2.5rem, 6.62vw, 5rem)',
         }}
       >
-        <div>
+        <motion.div
+          variants={headingVariants}
+          initial='hidden'
+          whileInView='inView'
+        >
           <Image
             src='/images/person.jpg'
             alt='hero image'
@@ -49,8 +65,13 @@ const Who_I_am = () => {
               borderRadius: 'clamp(0.75rem, 1.99vw, 1.5rem)',
             }}
           />
-        </div>
-        <div className='flex-start flex-wrap'>
+        </motion.div>
+        <motion.div 
+          className='flex-start flex-wrap'
+          variants={headingVariants}
+          initial='hidden'
+          whileInView='inView'
+        >
           <div className='max-w-115 flex-[2.5] basis-85'>
             <h2 className='display-sm-extrabold md:display-2xl-extrabold text-neutral-100 mb-3'>
               Who am I?
@@ -71,7 +92,7 @@ const Who_I_am = () => {
               performance optimization.{' '}
             </p>
           </div>
-        </div>
+        </motion.div>
         <motion.div 
           className='flex-center flex-wrap gap-4 pb-10 md:flex-row md:pb-20'
           variants={bubbleExpVariants}

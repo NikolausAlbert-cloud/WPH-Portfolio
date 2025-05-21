@@ -43,7 +43,7 @@ const Core_skill = () => {
           backgroundSize: 'cover',
           left: "0%",
           backgroundRepeat: 'no-repeat',
-          width: "40rem",
+          width: "clamp(20rem, 52.98vw, 40rem)",
           aspectRatio: "1/1",
           rotate: "180deg",
         }}

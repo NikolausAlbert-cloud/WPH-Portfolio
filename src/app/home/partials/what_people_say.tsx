@@ -16,7 +16,7 @@ const What_people_say = () => {
         right: 0,
         top: "-20%",
         backgroundRepeat: 'no-repeat',
-        width: "40rem",
+        width: "clamp(20rem, 52.98vw, 40rem)",
         aspectRatio: "1/1",
       }}
       />

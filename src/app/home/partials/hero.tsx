@@ -43,9 +43,9 @@ const Hero = () => {
         position: 'absolute',
         backgroundImage: 'url(/background/hero-ellipse-decoration.svg)',
         backgroundSize: 'cover',
-        right: "0",
+        right: 0,
         backgroundRepeat: 'no-repeat',
-        width: "40rem",
+        width: "clamp(20rem, 52.98vw, 40rem)",
         aspectRatio: "1/1",
       }}
       />
@@ -54,11 +54,11 @@ const Hero = () => {
         position: 'absolute',
         backgroundImage: 'url(/background/hero-circle-decoration.png)',
         backgroundSize: 'cover',
-        left: "0%",
+        left: "50%",
         top: "20%",
         opacity: "0.5",
         backgroundRepeat: 'no-repeat',
-        width: "20rem",
+        width: "clamp(20rem, 52.98vw, 40rem)",
         aspectRatio: "1/1",
       }}
       />

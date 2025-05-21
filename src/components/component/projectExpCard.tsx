@@ -1,19 +1,39 @@
+"use client";
 
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 import { ProjectExpData } from '@/constants/projectExpData';
 
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    scale: 0.7,
+  },
+  view: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'easeIn',
+    },
+  },
+};
+
 export const ProjectExpCard = () => {
   return (
     <div className='flex-center relative flex flex-1 flex-wrap gap-8 md:gap-3'>
       {ProjectExpData.map((item, i) => (
-        <div
+        <motion.div
           key={i}
           style={{
             width: 'clamp(19rem, 30.63vw, 23.13rem)',
           }}
+          variants={cardVariants}
+          initial='initial'
+          whileInView='view'
         >
           <Image
             src={item.src}
@@ -38,22 +58,24 @@ export const ProjectExpCard = () => {
               {item.description}
             </p>
           </div>
-          <button className='cursor-pointer h-7 md:h-8'>
-            <Link href='#' className='flex flex-row items-center md:items-start'>
-              <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent pr-1.5 md:pr-3'>
+          <button className='h-7 cursor-pointer md:h-8'>
+            <Link
+              href='#'
+              className='flex flex-row items-center md:items-start'
+            >
+              <span className='tex-md-bold md:text-lg-bold bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text pr-1.5 text-transparent md:pr-3'>
                 Visit
               </span>
               <Image
-                src="/icons/upRightArrow.svg"
-                alt="upRightArrow"
+                src='/icons/upRightArrow.svg'
+                alt='upRightArrow'
                 width='10'
                 height='10'
-                className="mt-0 md:mt-2 max-sm:size-3"
-                
+                className='mt-0 max-sm:size-3 md:mt-2'
               />
             </Link>
           </button>
-        </div>
+        </motion.div>
       ))}
 
       {/* "Detail" Info only in xl size */}

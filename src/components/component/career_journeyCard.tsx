@@ -1,11 +1,27 @@
-// 'use client';
+'use client';
 
+import {motion} from "framer-motion";
 import { Building, CalendarDays } from 'lucide-react';
 import React from 'react';
 
 import { careerJourneyData } from '@/constants/career_journeyData';
 
 import Career_journeyLine from '../client_component/career_journeyLine';
+
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  view: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeIn',
+    },
+  },
+};
 
 const Career_journeyCard: React.FC = () => {
   return (
@@ -18,7 +34,12 @@ const Career_journeyCard: React.FC = () => {
             {/* circle */}
             <span className='ring-primary-100 absolute inset-0 size-5 rounded-full bg-gradient-to-r from-pink-600 to-purple-500 ring-5 ring-inset'></span>
           </div>
-          <div className='flex flex-col gap-3 rounded-4xl bg-neutral-500 p-3 text-neutral-100 md:gap-5 md:p-6 ml-4'>
+          <motion.div 
+            className='flex flex-col gap-3 rounded-4xl bg-neutral-500 p-3 text-neutral-100 md:gap-5 md:p-6 ml-4'
+            variants={cardVariants}
+            initial='initial'
+            whileInView='view'  
+          >
             <h3 className='text-md-bold md:display-xs-bold'>{item.title}</h3>
             <div className='text-sm-regular md:text-md-regular flex w-fit flex-col md:flex-row'>
               <p className='mb-3 flex flex-row gap-[2px] md:mb-0 md:gap-[6px]'>
@@ -41,7 +62,7 @@ const Career_journeyCard: React.FC = () => {
                 <li className="">{task.description}</li>
               </ul>
             ))}
-          </div>
+          </motion.div>
         </div>
       ))}
     </div>
